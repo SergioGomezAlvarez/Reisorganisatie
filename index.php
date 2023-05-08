@@ -19,9 +19,11 @@
 
 <body>
 <header>
-    <div class="topbar-area"></div>
+    <div class="topbar-area">
+        <div class="container">
+
+        </div>
+    </div>
 </header>
-
-
 
 </body>

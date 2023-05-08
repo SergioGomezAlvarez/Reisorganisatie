@@ -18,24 +18,30 @@
 </head>
 
 <body>
-<header>
-    <div class="topbar-area">
-        <div class="container">
+    <main class="main">
+        <header class="header">
+            <div class="topbar-area">
+                <div class="container">
 
-        </div>
-    </div>
-    <div class="logo">
-        <img class="logo-img" src="img/Logo1.2.jpg" alt="">
-    </div>
-    <nav class="navbar">
-        <ul class="navlists">
-            <li class="navlist"><a href="#home">Verblijven</a></li>
-            <li class="navlist"><a href="#restaurants">Vluchten</a></li>
-            <li class="navlist"><a href="#restaurants">Restaurants</a></li>
-            <li class="navlist"><a href="#tours">Popular Destinations</a></li>
-        </ul>
-    </nav>
-
-</header>
+                </div>
+            </div>
+            <div class="logo">
+                <img class="logo-img" src="img/Logo1.2.jpg" alt="">
+            </div>
+            <nav class="navbar">
+                <ul class="navlists">
+                    <li class="navlist"><a href="#home">Verblijven</a></li>
+                    <li class="navlist"><a href="#restaurants">Vluchten</a></li>
+                    <li class="navlist"><a href="#restaurants">Restaurants</a></li>
+                    <li class="navlist"><a href="#tours">Popular Destinations</a></li>
+                </ul>
+            </nav>
+            <form onsubmit="event.preventDefault();" role="search">
+                <label for="search">Search for stuff</label>
+                <input id="search" type="search" placeholder="Search..." autofocus required />
+                <button type="submit">Go</button>
+            </form>
+        </header>
+    </main>
 
 </body>

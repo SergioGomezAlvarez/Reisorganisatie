@@ -21,37 +21,23 @@
 </head>
 
 <body>
-    <main class="main">
-
-        <nav>
+    <header class="header">
+    <nav>
             <div class="navigatie-first">
                 <a href="#">+31 6 234 567 89</a>
                 <span class="scheidingslijn"></span>
                 <a href="#">contact@domain.com</a>
             </div>
             <div class="navigatie-second">
-                    <a href="#">Login</a>
-                    <span class="scheidingslijn"></span>
-                    <a href="#">Sign Up</a>
-                    <span class="scheidingslijn"></span>
-                    <a href="#">NL</a>
-                    <span class="scheidingslijn"></span>
-                    <a href="#">Euro</a>
+                <a href="#">Login</a>
+                <span class="scheidingslijn"></span>
+                <a href="#">Sign Up</a>
+                <span class="scheidingslijn"></span>
+                <a href="#">NL</a>
+                <span class="scheidingslijn"></span>
+                <a href="#">Euro</a>
             </div>
-            <nav class="navbar">
-                <ul class="navlists">
-                    <li class="navlist"><a href="#home">Verblijven</a></li>
-                    <li class="navlist"><a href="#restaurants">Vluchten</a></li>
-                    <li class="navlist"><a href="#restaurants">Restaurants</a></li>
-                    <li class="navlist"><a href="#tours">Popular Destinations</a></li>
-                </ul>
-            </nav>
-            <form onsubmit="event.preventDefault();" role="search">
-                <label for="search">Search for stuff</label>
-                <input id="search" type="search" placeholder="Search..." autofocus required />
-                <button type="submit">Go</button>
-            </form>
-        </header>
-    </main>
+        </nav>
+    </header>
 
 </body>

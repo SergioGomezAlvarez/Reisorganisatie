@@ -20,9 +20,10 @@
 </head>
 
 <body>
-<header>
-    <div class="topbar-area">
-        <div class="container">
+    <main class="main">
+        <header class="header">
+            <div class="topbar-area">
+                <div class="container">
     <header>
         <nav>
             <div class="navigatie-first">
@@ -31,20 +32,25 @@
                 <a href="#">contact@domain.com</a>
             </div>
 
-        </div>
-    </div>
-</header>
+                </div>
+            </div>
+        </header>
             <div class="navigatie-second">
-                <a href="#">Login</a>
-                <span class="scheidingslijn"></span>
-                <a href="#">Sign Up</a>
-                <span class="scheidingslijn"></span>
-                <a href="#">NL</a>
-                <span class="scheidingslijn"></span>
+                        <a href="#">Login</a>
+                                        <span class="scheidingslijn"></span>
+                        <a href="#">Sign Up</a>
+                        <span class="scheidingslijn"></span>
+                        <a href="#">NL</a>
+                        <span class="scheidingslijn"></span>
                 <a href="#">Euro</a>
 
-            </div>
-        </nav>
-    </header>
+                    </div>
+                </nav>
+            <form onsubmit="event.preventDefault();" role="search">
+                <label for="search">Search for stuff</label>
+                <input id="search" type="search" placeholder="Search..." autofocus required />
+                <button type="submit">Go</button>
+            </form>            </header>
+    </main>
 
 </body>

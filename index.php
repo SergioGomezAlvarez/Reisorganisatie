@@ -38,9 +38,20 @@
                     <span class="scheidingslijn"></span>
                     <a href="#">Euro</a>
             </div>
-        </nav>
-
-
+            <nav class="navbar">
+                <ul class="navlists">
+                    <li class="navlist"><a href="#home">Verblijven</a></li>
+                    <li class="navlist"><a href="#restaurants">Vluchten</a></li>
+                    <li class="navlist"><a href="#restaurants">Restaurants</a></li>
+                    <li class="navlist"><a href="#tours">Popular Destinations</a></li>
+                </ul>
+            </nav>
+            <form onsubmit="event.preventDefault();" role="search">
+                <label for="search">Search for stuff</label>
+                <input id="search" type="search" placeholder="Search..." autofocus required />
+                <button type="submit">Go</button>
+            </form>
+        </header>
     </main>
 
 </body>

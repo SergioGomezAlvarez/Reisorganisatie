@@ -22,7 +22,7 @@
 
 <body>
     <header class="header">
-    <nav>
+        <nav>
             <div class="navigatie-first">
                 <a href="#">+31 6 234 567 89</a>
                 <span class="scheidingslijn"></span>
@@ -38,6 +38,18 @@
                 <a href="#">Euro</a>
             </div>
         </nav>
+        <div class="top-info">
+            <div class="top-logo">
+
+            </div>
+            <div class="top-midden-info">
+                
+            </div>
+            <div class="top-zoeken">
+
+            </div>
+        </div>
     </header>
+
 
 </body>

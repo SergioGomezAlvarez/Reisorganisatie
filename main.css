@@ -53,4 +53,6 @@ nav {
    min-height: 800px;
     border-radius: 0 0 50px 50px;
    display: flex;
+   flex-direction: column;
 }
+

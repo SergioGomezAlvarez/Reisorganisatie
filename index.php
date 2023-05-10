@@ -36,11 +36,7 @@
                     <li class="navlist"><a href="#tours">Popular Destinations</a></li>
                 </ul>
             </nav>
-            <form onsubmit="event.preventDefault();" role="search">
-                <label for="search">Search for stuff</label>
-                <input id="search" type="search" placeholder="Search..." autofocus required />
-                <button type="submit">Go</button>
-            </form>
+       
         </header>
     </main>
 

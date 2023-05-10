@@ -1,0 +1,53 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    padding-left: 40px;
+    background-color: black;
+}
+
+.navigatie-first {
+    display: flex;
+    width: 25%;
+    flex: 1;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+}
+
+.navigatie-first a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.scheidingslijn {
+    height: 20px;
+    width: 1px;
+    background-color: white;
+    margin: 0 10px;
+}
+
+.navigatie-second {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+}
+
+.navigatie-second a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}

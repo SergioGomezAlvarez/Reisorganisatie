@@ -17,25 +17,34 @@
         rel="stylesheet">
 </head>
 
+</head>
+
 <body>
 <header>
     <div class="topbar-area">
         <div class="container">
+    <header>
+        <nav>
+            <div class="navigatie-first">
+                <a href="#">+31 6 234 567 89</a>
+                <span class="scheidingslijn"></span>
+                <a href="#">contact@domain.com</a>
+            </div>
 
         </div>
     </div>
-    <div class="logo">
-        <img class="logo-img" src="img/Logo1.2.jpg" alt="">
-    </div>
-    <nav class="navbar">
-        <ul class="navlists">
-            <li class="navlist"><a href="#home">Verblijven</a></li>
-            <li class="navlist"><a href="#restaurants">Vluchten</a></li>
-            <li class="navlist"><a href="#restaurants">Restaurants</a></li>
-            <li class="navlist"><a href="#tours">Popular Destinations</a></li>
-        </ul>
-    </nav>
-
 </header>
+            <div class="navigatie-second">
+                <a href="#">Login</a>
+                <span class="scheidingslijn"></span>
+                <a href="#">Sign Up</a>
+                <span class="scheidingslijn"></span>
+                <a href="#">NL</a>
+                <span class="scheidingslijn"></span>
+                <a href="#">Euro</a>
+
+            </div>
+        </nav>
+    </header>
 
 </body>

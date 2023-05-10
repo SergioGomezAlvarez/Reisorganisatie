@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,36 +22,25 @@
 
 <body>
     <main class="main">
-        <header class="header">
-            <div class="topbar-area">
-                <div class="container">
-    <header>
+
         <nav>
             <div class="navigatie-first">
                 <a href="#">+31 6 234 567 89</a>
                 <span class="scheidingslijn"></span>
                 <a href="#">contact@domain.com</a>
             </div>
-
-                </div>
-            </div>
-        </header>
             <div class="navigatie-second">
-                        <a href="#">Login</a>
-                                        <span class="scheidingslijn"></span>
-                        <a href="#">Sign Up</a>
-                        <span class="scheidingslijn"></span>
-                        <a href="#">NL</a>
-                        <span class="scheidingslijn"></span>
-                <a href="#">Euro</a>
+                    <a href="#">Login</a>
+                    <span class="scheidingslijn"></span>
+                    <a href="#">Sign Up</a>
+                    <span class="scheidingslijn"></span>
+                    <a href="#">NL</a>
+                    <span class="scheidingslijn"></span>
+                    <a href="#">Euro</a>
+            </div>
+        </nav>
 
-                    </div>
-                </nav>
-            <form onsubmit="event.preventDefault();" role="search">
-                <label for="search">Search for stuff</label>
-                <input id="search" type="search" placeholder="Search..." autofocus required />
-                <button type="submit">Go</button>
-            </form>            </header>
+
     </main>
 
 </body>

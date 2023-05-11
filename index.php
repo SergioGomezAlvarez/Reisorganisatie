@@ -10,11 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
-    <link
-      rel="stylesheet"
-      media=" screen and (max-width:768px)"
-      href="mobile.css"
-    />
+    <link rel="stylesheet" media=" screen and (max-width:768px)" href="mobile.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -46,10 +42,7 @@
             <div class="top-logo">
                 <img class="logo-img" src="img/Logo1.2.jpg" alt="">
             </div>
-                <img class="logo-img" src="img/Logo1.2.jpg" alt="">
-            </div>
             <div class="top-midden-info">
-
                 <a class="underline-button"><i class="fa-solid fa-bed"></i> Click me</a>
             </div>
             <div class="top-zoeken">
@@ -58,13 +51,12 @@
 
                     <button class="btn">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </div>
-                    <div class="mijn-reservring-box"></div>
+                    </button>
+                </div>
+                <div class="mijn-reservring-box"></div>
             </div>
         </div>
     </header>
-    <script src="java.js"></script>
 
     <script src="https://kit.fontawesome.com/017f40d907.js" crossorigin="anonymous"></script>
 </body>

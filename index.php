@@ -40,10 +40,10 @@
         </nav>
         <div class="top-info">
             <div class="top-logo">
-            <img class="logo-img" src="img/Logo1.2.jpg" alt="">
-        </div>
+                <img class="logo-img" src="img/Logo1.2.jpg" alt="">
+            </div>
             <div class="top-midden-info">
-                
+                <a class="underline-button"><i class="fa-solid fa-bed"></i> Click me</a>
             </div>
             <div class="top-zoeken">
 
@@ -51,5 +51,5 @@
         </div>
     </header>
 
-
+    <script src="https://kit.fontawesome.com/017f40d907.js" crossorigin="anonymous"></script>
 </body>

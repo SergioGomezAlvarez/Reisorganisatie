@@ -187,11 +187,22 @@ nav {
     height: 200px;
 }
 
-.top-text1{
+.top-text1 {
     font-size: 60px;
     color: white;
 }
-.top-text2{
+
+.top-text2 {
     font-size: 40px;
     color: white;
+}
+
+.zoek-reis-bg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100px;
+    background-color: aquamarine;
 }

@@ -67,6 +67,9 @@
                 WE HELPEN U OM DE BESTE REIS TE KIEZEN
             </h1>
         </div>
+        <div class="zoek-reis-bg">
+
+        </div>
     </header>
     <script src="java.js"></script>
     <script src="https://kit.fontawesome.com/017f40d907.js" crossorigin="anonymous"></script>

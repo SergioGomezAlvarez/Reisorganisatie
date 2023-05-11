@@ -113,10 +113,26 @@ nav {
 .parent.active .input {
     width: 200px;
     }
-    
-
-
-
+.search-btn{
+    width: 25px;
+    padding: 3px 5px;
+    cursor: pointer;
+    border-radius: 100px;
+    border: none;
+    background-color: rgba(150, 150, 150, 0.51);
+    display: inline;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+.parent.active .search-btn {
+    transform: translateX(170px);
+    }
+.fa-solid{
+    color: white;
+}
 .underline-button {
     position: relative;
     display: inline-block;

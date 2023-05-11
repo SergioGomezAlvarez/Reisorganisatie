@@ -106,7 +106,12 @@ nav {
     align-items: center;
     justify-content: center;
 }
-
+.mijn-reservering-text{
+    color: white;
+    font-size: 23px;
+    font-weight: 60;
+    text-decoration: none;
+}
 .underline-button {
     position: relative;
     display: inline-block;

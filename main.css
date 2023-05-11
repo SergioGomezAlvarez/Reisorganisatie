@@ -77,10 +77,43 @@ nav {
 .top-zoeken{
     width: 30%;
     height: 100%;
-    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
 }
 .logo-img {
     width: 150px;    
     mix-blend-mode: difference;    
 }
+.parent{
+    
+    position: relative;
+}
+.mijn-reservring-box{
+    width: 40%;
+    height: 20%;
+    background-color:rgba(70, 95, 100, 0.59);
+    border-radius: 3px;
+    padding: 2px 5px;
+}
+.search-input{
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    background-color: rgba(150, 150, 150, 0.51);
+    width: 100px;
+    transition: width 0.5s ease; 
+}
+.search-input::placeholder{
+    color: white;
+}
+.parent.active .input {
+    width: 200px;
+    }
+    
+
+
 

@@ -9,8 +9,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="main.css">
+    <link
+      rel="stylesheet"
+      media=" screen and (max-width:768px)"
+      href="mobile.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -40,16 +44,22 @@
         </nav>
         <div class="top-info">
             <div class="top-logo">
-            <img class="logo-img" src="img/Logo1.2.jpg" alt="">
-        </div>
+                <img class="logo-img" src="img/Logo1.2.jpg" alt="">
+            </div>
             <div class="top-midden-info">
-                
+
             </div>
             <div class="top-zoeken">
+                <div class="parent">
+                    <input class="search-input" type="type" placeholder="Search..." />
 
+                    <button class="btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <div class="mijn-reservring-box"></div>
             </div>
         </div>
     </header>
-
-
+    <script src="java.js"></script>
 </body>

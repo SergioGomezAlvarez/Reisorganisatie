@@ -46,7 +46,7 @@
                 <a class="underline-button"><i class="fa-solid fa-bed"></i> Verblijven</a>
                 <a class="underline-button"><i class="fa-solid fa-plane rotate-90"></i> Vluchten</a>
                 <a class="underline-button"><i class="fa-solid fa-hotel"></i> Hotel</a>
-                <a class="underline-button"><i class="fa-solid fa-bridge"></i> Populaire Bestemmingen</a>
+                <a class="underline-button"><i class="fa-solid fa-bridge"></i> Populaire Bestemmingen </a>
             </div>
             <div class="top-zoeken">
                 <div class="parent">
@@ -58,6 +58,14 @@
                 </div>
                 <div class="mijn-reservring-box"></div>
             </div>
+        </div>
+        <div class="top-text-bg">
+            <h1 class="top-text1">
+                LATEN WE BEGINNEN
+            </h1>
+            <h1 class="top-text2">
+                WE HELPEN U OM DE BESTE REIS TE KIEZEN
+            </h1>
         </div>
     </header>
     <script src="java.js"></script>

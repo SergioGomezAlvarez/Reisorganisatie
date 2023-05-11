@@ -90,52 +90,22 @@ nav {
     width: 150px;    
     mix-blend-mode: difference;    
 }
-.parent{
-    
-    position: relative;
-}
 .mijn-reservring-box{
     width: 40%;
     height: 20%;
     background-color:rgba(70, 95, 100, 0.59);
     border-radius: 3px;
     padding: 2px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.search-input{
-    outline: none;
-    border: none;
-    border-radius: 3px;
-    padding: 5px 10px;
-    background-color: rgba(150, 150, 150, 0.51);
-    width: 100px;
-    transition: width 0.5s ease; 
-}
-.search-input::placeholder{
+.mijn-reservering-text{
     color: white;
+    font-size: 23px;
+    text-decoration: none;
 }
-.parent.active .input {
-    width: 200px;
-    }
-.search-btn{
-    width: 25px;
-    padding: 3px 5px;
-    cursor: pointer;
-    border-radius: 100px;
-    border: none;
-    background-color: rgba(150, 150, 150, 0.51);
-    display: inline;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.3s ease;
-}
-.parent.active .search-btn {
-    transform: translateX(170px);
-    }
-.fa-solid{
-    color: white;
-}
+
 .underline-button {
     position: relative;
     display: inline-block;
@@ -162,3 +132,48 @@ nav {
   .rotate-90 {
     transform: rotate(90deg);
   }
+  .parent {
+    position: relative;
+    }
+    
+    .input {
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 0px;
+    width: 40px;
+    background-color: rgba(150, 150, 150, 0.51);
+    transition: width 0.3s ease;
+    }
+    
+    .input::placeholder {
+    color: rgb(255, 255, 255);
+    }
+    
+    .parent.active .input {
+    width: 158px;
+    }
+    
+    .btn {
+    width: 40px;
+    padding: 7px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    background-color:black;
+    display: inline;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+    }
+    
+    .parent.active .btn {
+    transform: translateX(162px);
+    }
+    
+    .fa-solid {
+    color: #ffffff;
+    }
+   

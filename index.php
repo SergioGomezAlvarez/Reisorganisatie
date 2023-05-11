@@ -16,6 +16,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Roboto+Condensed&display=swap"
         rel="stylesheet">
+    <script src="java.js"></script>
 </head>
 
 </head>
@@ -49,17 +50,19 @@
                 <a class="underline-button"><i class="fa-solid fa-bridge"></i> Populaire Bestemmingen</a>
             </div>
             <div class="top-zoeken">
-                <div class="parent">
-                    <input class="search-input" type="type" placeholder="Search..." />
+                <div class="parent" id="parent">
 
-                    <button class="search-btn">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
+                    <input class="input" id="input" type="type" placeholder="Search..." />
+                     <button class="btn" id="button">
+                         <i class="fa-solid fa-magnifying-glass"></i>
+                         </button>
+
                 </div>
-                <div class="mijn-reservring-box"></div>
+                <div class="mijn-reservring-box"><a class="mijn-reservering-text" href="">Mijn reservering</a></div>
             </div>
         </div>
+        
+
     </header>
-    <script src="java.js"></script>
     <script src="https://kit.fontawesome.com/017f40d907.js" crossorigin="anonymous"></script>
 </body>

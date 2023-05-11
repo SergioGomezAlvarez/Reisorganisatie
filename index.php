@@ -43,7 +43,10 @@
                 <img class="logo-img" src="img/Logo1.2.jpg" alt="">
             </div>
             <div class="top-midden-info">
-                <a class="underline-button"><i class="fa-solid fa-bed"></i> Click me</a>
+                <a class="underline-button"><i class="fa-solid fa-bed"></i> Verblijven</a>
+                <a class="underline-button"><i class="fa-solid fa-plane rotate-90"></i> Vluchten</a>
+                <a class="underline-button"><i class="fa-solid fa-hotel"></i> Hotel</a>
+                <a class="underline-button"><i class="fa-solid fa-bridge"></i> Populaire Bestemmingen</a>
             </div>
             <div class="top-zoeken">
                 <div class="parent">

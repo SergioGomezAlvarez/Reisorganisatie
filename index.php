@@ -70,7 +70,7 @@
             </h1>
         </div>
         <div class="zoek-reis-big-div">
-
+            <div class="zoek-reis-div"></div>
         </div>
     </header>
     <script src="https://kit.fontawesome.com/017f40d907.js" crossorigin="anonymous"></script>

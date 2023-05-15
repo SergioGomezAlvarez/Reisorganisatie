@@ -53,9 +53,9 @@
                 <div class="parent" id="parent">
 
                     <input class="input" id="input" type="type" placeholder="Search..." />
-                     <button class="btn" id="button">
-                         <i class="fa-solid fa-magnifying-glass"></i>
-                         </button>
+                    <button class="btn" id="button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
 
                 </div>
                 <div class="mijn-reservring-box"><a class="mijn-reservering-text" href="">Mijn reservering</a></div>
@@ -70,7 +70,53 @@
             </h1>
         </div>
         <div class="zoek-reis-big-div">
-            <div class="zoek-reis-div"></div>
+            <div class="zoek-reis-div">
+                <div class="bestemming">
+                    <p>Bestemming</p>
+                    <input type="text" placeholder="Waar wil je naar toe?">
+                    <span>Waar wil je naar toe?</span>
+                </div>
+                <div class="reisdatum">
+                    <p>Reisdatum</p>
+                    <input type="date" value="2023-05-03">
+                </div>
+                <div class="retourdatum">
+                    <p>Retourdatum</p>
+                    <input type="date" value="2023-05-03">
+                </div>
+                <div class="passagier">
+                    <p>Passagier</p>
+                    <button onclick="myFunction()"> +0 Passagier</button>
+                    <div id="passagier-keizen">
+                        <h6>passagier</h6>
+                        <div class="passagiers-types">
+                            <div class="passagiers-type1">
+                                <div class="text">
+                                    <span class="tel-passagiers">1</span>
+                                    <div class="type-label">
+                                        <p>Volwassen</p>
+                                        <span>
+                                            "12 jaar en ouder"
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="button-set">
+                                    <button type="button" fdprocessedid="gy08hr">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                    <button type="button" fdprocessedid="gy08hr">
+                                        <i class="fa-solid fa-minus"></i>
+                                </div>
+                            </div>
+                            <div class="passagiers-type2"></div>
+                            <div class="passagiers-type3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="zoek_knop">
+
+                </div>
+            </div>
         </div>
     </header>
     <script src="https://kit.fontawesome.com/017f40d907.js" crossorigin="anonymous"></script>

@@ -112,6 +112,10 @@ nav {
     font-weight: 60;
     text-decoration: none;
 }
+.mijn-reservering-text,
+.mijn-reservering-text {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
 .underline-button {
     position: relative;
     display: inline-block;
@@ -176,7 +180,7 @@ nav {
     }
     
     .parent.active .input {
-    width: 158px;
+    width: 200px;
     }
     
     .btn {
@@ -215,6 +219,143 @@ nav {
     width: 63%;
     height: 50%;
     background-color: rgba(70, 95, 100, 0.59);
-    border-radius: 3px;
-    padding: 2px 5px;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 4px 14px 28px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 8px 33px;
+}
+.bestemming{
+    width: 225px;
+    height: 69px;
+    background-color: rgba(150, 150, 150, 0.51);
+    border-radius: 6px;
+}
+.bestemming p {
+    font-size: 17px;
+    color: #fff;
+}
+.bestemming input {
+    font-size: 22px;
+    width: 97%;
+    border: none;
+    background: transparent;
+    font-weight: 500;
+    padding: 0;
+}
+.bestemming span {
+    display: block;
+    font-size: 10px;
+    padding-top: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #fff;
+}
+::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: rgb(0, 0, 0);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: rgb(0, 0, 0);
+  }
+.reisdatum{
+    width: 120px;
+    height: 55px;
+    background-color: rgba(150, 150, 150, 0.51);
+    border-radius: 10px;
+}
+.reisdatum p{
+    font-size: 13px;
+    color: #fff;
+    margin: 3px;
+}
+.reisdatum input{
+    font-size: 16px;
+    width: 88%;
+    border: none;
+    background: transparent;
+    font-weight: 500;
+    height: 28px;
+    padding: 0;
+}
+
+.retourdatum{
+    width: 120px;
+    height: 55px;
+    background-color: rgba(150, 150, 150, 0.51);
+    border-radius: 10px;
+}
+.retourdatum p{
+    font-size: 13px;
+    color: #fff;
+    margin: 3px;
+}
+.retourdatum input{
+    font-size: 16px;
+    width: 88%;
+    border: none;
+    background: transparent;
+    font-weight: 500;
+    height: 28px;
+    padding: 0;
+}
+.passagier{
+    width: 120px;
+    height: 56px;
+    background-color: rgba(150, 150, 150, 0.51);
+    border-radius: 10px;
+}
+.passagier p{
+    font-size: 13px;
+    color: #fff;
+    margin: 3px;
+}
+.passagier button{
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0px 16px;
+}
+#passagier-keizen{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(70, 95, 100, 0.59);
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 4px 14px 28px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 33px 33px;
+}
+.passagiers-types{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: royalblue;
+}
+.passagiers-type1{
+    display: flex;
+    flex-direction: column;
+}
+.zoek_knop{
+    width: 100px;
+    height: 53px;
+    background-color: rgba(150, 150, 150, 0.51);
+    border-radius: 10px;
 }

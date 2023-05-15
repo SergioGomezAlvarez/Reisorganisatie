@@ -21,3 +21,17 @@ const button = document.getElementById("button");
  })
     
     });
+    ScrollReveal().reveal('.top-text1', {
+        scale: 2,
+        duration: 3000,
+        mobile: false,
+      });
+      
+      ScrollReveal().reveal('.top-text-bg', {
+      
+        scale: 2,
+        duration: 3000,
+        delay: 500,
+        mobile: false,
+      });
+    

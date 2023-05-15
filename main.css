@@ -202,12 +202,12 @@ nav {
     color: #ffffff;
     }
 
-.zoek-reis-bg {
+.zoek-reis-big-div{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 60%;
-    height: 100px;
-    background-color: aquamarine;
+    width: 100%;
+    height: 350px;
+    background-color: aqua;
 }

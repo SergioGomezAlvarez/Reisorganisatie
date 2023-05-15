@@ -69,7 +69,7 @@
                 WE HELPEN U OM DE BESTE REIS TE KIEZEN
             </h1>
         </div>
-        <div class="zoek-reis-bg">
+        <div class="zoek-reis-big-div">
 
         </div>
     </header>

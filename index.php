@@ -16,7 +16,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Roboto+Condensed&display=swap"
         rel="stylesheet">
-    <script src="java.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 </head>
@@ -86,30 +86,51 @@
                 </div>
                 <div class="passagier">
                     <p>Passagier</p>
-                    <button onclick="myFunction()"> +0 Passagier</button>
-                    <div id="passagier-keizen">
-                        <h6>passagier</h6>
+                    <button onclick="myFunction()"> +0 Passagier</i></button>
+                    <div id="passagier-keizen" style="display: none box-shadow: 0 7px 17px rgb(0 0 0 / 0.2);}">
                         <div class="passagiers-types">
-                            <div class="passagiers-type1">
-                                <div class="text">
-                                    <span class="tel-passagiers">1</span>
-                                    <div class="type-label">
-                                        <p>Volwassen</p>
-                                        <span>
-                                            "12 jaar en ouder"
-                                        </span>
-                                    </div>
+                            <div class="passagiers-type">
+                                <div class="Volwassenen">
+                                    <p>Volwassenen</p>
                                 </div>
                                 <div class="button-set">
-                                    <button type="button" fdprocessedid="gy08hr">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </button>
-                                    <button type="button" fdprocessedid="gy08hr">
+                                    <button type="button" id="minus2">
                                         <i class="fa-solid fa-minus"></i>
+                                        </button>
+                                        <input class="passagiers-set" type="number" value="0" id="input2"/>
+                                        <button type="button" id="plus2">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
                                 </div>
                             </div>
-                            <div class="passagiers-type2"></div>
-                            <div class="passagiers-type3"></div>
+                            <div class="passagiers-type">
+                            <div class="Volwassenen">
+                                    <p>kinderen</p>
+                                </div>
+                                <div class="button-set">
+                                    <button type="button" id="minus3">
+                                        <i class="fa-solid fa-minus"></i>
+                                        </button>
+                                        <input class="passagiers-set" type="number" value="0" id="input2"/>
+                                        <button type="button" id="plus3">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                </div>
+                            </div>
+                            <div class="passagiers-type">
+                            <div class="Volwassenen">
+                                    <p>Zuigeling</p>
+                                </div>
+                                <div class="button-set">
+                                    <button type="button" id="minus">
+                                        <i class="fa-solid fa-minus"></i>
+                                        </button>
+                                        <input class="passagiers-set" type="number" value="0" id="input2"/>
+                                        <button type="button" id="plus">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -119,5 +140,13 @@
             </div>
         </div>
     </header>
+    <main>
+        <section class="bestemmingen">
+            <div class="bestemmingen-container">
+                <h2 class="section-title">Populaire bestemmingen</h2>
+            </div>
+        </section>
+    </main>
     <script src="https://kit.fontawesome.com/017f40d907.js" crossorigin="anonymous"></script>
+    <script src="java.js"></script>
 </body>

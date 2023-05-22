@@ -335,7 +335,7 @@ nav {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     display: flex;
-    flex-wrap: wrap;
+    
     justify-content: space-around;
     align-items: center;
     box-shadow: 4px 14px 28px rgba(0, 0, 0, 0.1);
@@ -343,18 +343,44 @@ nav {
     padding: 100px 80px;
 }
 .passagiers-types{
+    height: 175px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    background-color: royalblue;
 }
-.passagiers-type1{
+.passagiers-type{
+    width: 278px;
+    height: 50px;
+    align-items: center;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+.passagiers-set{
+    width: 32px;
+    font-size: 16px;
+    border: none;
+    background: transparent;
+    font-weight: 500;
+    height: 28px;
+    padding: 0;
+  }
 .zoek_knop{
     width: 100px;
     height: 53px;
     background-color: rgba(150, 150, 150, 0.51);
     border-radius: 10px;
 }
+.bestemmingen-container{
+    max-width: 1378px;
+    margin: auto;
+    background-color: rosybrown;
+}
+.section-title {
+    font-size: var(--title-font-size);
+    margin-bottom: 6.4rem;
+    font-weight: 700;
+    margin-top: 12rem;
+  }
+ 

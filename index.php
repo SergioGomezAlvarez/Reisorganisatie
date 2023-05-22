@@ -30,7 +30,7 @@
                 <a href="#">contact@domain.com</a>
             </div>
             <div class="navigatie-second">
-                <a href="#">Login</a>
+                <a href="login.php">Login</a>
                 <span class="scheidingslijn"></span>
                 <a href="#">Sign Up</a>
                 <span class="scheidingslijn"></span>

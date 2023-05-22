@@ -87,7 +87,7 @@
                 <div class="passagier">
                     <p>Passagier</p>
                     <button onclick="myFunction()"> +0 Passagier</i></button>
-                    <div id="passagier-keizen" style="display: none box-shadow: 0 7px 17px rgb(0 0 0 / 0.2);}">
+                    <div id="passagier-keizen" style="display:none">
                         <div class="passagiers-types">
                             <div class="passagiers-type">
                                 <div class="Volwassenen">
@@ -111,7 +111,7 @@
                                     <button type="button" id="minus3">
                                         <i class="fa-solid fa-minus"></i>
                                         </button>
-                                        <input class="passagiers-set" type="number" value="0" id="input2"/>
+                                        <input class="passagiers-set" type="number" value="0" id="input3"/>
                                         <button type="button" id="plus3">
                                             <i class="fa-solid fa-plus"></i>
                                         </button>
@@ -122,11 +122,11 @@
                                     <p>Zuigeling</p>
                                 </div>
                                 <div class="button-set">
-                                    <button type="button" id="minus">
+                                    <button type="button" id="minus4">
                                         <i class="fa-solid fa-minus"></i>
                                         </button>
-                                        <input class="passagiers-set" type="number" value="0" id="input2"/>
-                                        <button type="button" id="plus">
+                                        <input class="passagiers-set" type="number" value="0" id="input4"/>
+                                        <button type="button" id="plus4">
                                             <i class="fa-solid fa-plus"></i>
                                         </button>
                                 </div>
@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <div class="zoek_knop">
-
+                    <button type="button" class="zoek_knop_button">Zoek</button>
                 </div>
             </div>
         </div>

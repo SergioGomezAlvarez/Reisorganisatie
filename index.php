@@ -96,39 +96,39 @@
                                 <div class="button-set">
                                     <button type="button" id="minus2">
                                         <i class="fa-solid fa-minus"></i>
-                                        </button>
-                                        <input class="passagiers-set" type="number" value="0" id="input2"/>
-                                        <button type="button" id="plus2">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </button>
+                                    </button>
+                                    <input class="passagiers-set" type="number" value="0" id="input2" />
+                                    <button type="button" id="plus2">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="passagiers-type">
-                            <div class="Volwassenen">
+                                <div class="Volwassenen">
                                     <p>kinderen</p>
                                 </div>
                                 <div class="button-set">
                                     <button type="button" id="minus3">
                                         <i class="fa-solid fa-minus"></i>
-                                        </button>
-                                        <input class="passagiers-set" type="number" value="0" id="input2"/>
-                                        <button type="button" id="plus3">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </button>
+                                    </button>
+                                    <input class="passagiers-set" type="number" value="0" id="input2" />
+                                    <button type="button" id="plus3">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="passagiers-type">
-                            <div class="Volwassenen">
+                                <div class="Volwassenen">
                                     <p>Zuigeling</p>
                                 </div>
                                 <div class="button-set">
                                     <button type="button" id="minus">
                                         <i class="fa-solid fa-minus"></i>
-                                        </button>
-                                        <input class="passagiers-set" type="number" value="0" id="input2"/>
-                                        <button type="button" id="plus">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </button>
+                                    </button>
+                                    <input class="passagiers-set" type="number" value="0" id="input2" />
+                                    <button type="button" id="plus">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -141,11 +141,23 @@
         </div>
     </header>
     <main>
-        <section class="bestemmingen">
-            <div class="bestemmingen-container">
-                <h2 class="section-title">Populaire bestemmingen</h2>
+        <div class="main-container">
+            <section class="bestemmingen">
+                <div class="bestemmingen-container">
+                    <h2 class="section-title">Populaire bestemmingen</h2>
+                </div>
+            </section>
+            <div class="locatie-container">
+
             </div>
-        </section>
+            <section class="bestemmingen">
+                <div class="bestemmingen-container">
+                    <h2 class="section-title">Hotels En Restaurants</h2>
+                </div>
+            </section>
+
+        </div>
+
     </main>
     <script src="https://kit.fontawesome.com/017f40d907.js" crossorigin="anonymous"></script>
     <script src="java.js"></script>

@@ -70,6 +70,7 @@ const button = document.getElementById("button");
         inputField.value = currentValue + 1;
         event.preventDefault();
       });
+
       const minusButton1 = document.getElementById('minus3');
       const plusButton1 = document.getElementById('plus3');
       const inputField1 = document.getElementById('input3');
@@ -79,8 +80,28 @@ const button = document.getElementById("button");
         inputField1.value = currentValue - 1;
         event.preventDefault();
         
-      }
-      );
+      });
+      plusButton1.addEventListener('click', event => {
+        const currentValue = Number(inputField1.value) || 0;
+        inputField1.value = currentValue + 1;
+        event.preventDefault();
+      });
+      const minusButton2 = document.getElementById('minus4');
+      const plusButton2 = document.getElementById('plus4');
+      const inputField2 = document.getElementById('input4');
+
+      minusButton2.addEventListener('click', event => {
+        const currentValue = Number(inputField2.value) || 0;
+        inputField2.value = currentValue - 1;
+        event.preventDefault();
+        
+      });
+      plusButton2.addEventListener('click', event => {
+        const currentValue = Number(inputField2.value) || 0;
+        inputField2.value = currentValue + 1;
+        event.preventDefault();
+      });
+
       
       
   

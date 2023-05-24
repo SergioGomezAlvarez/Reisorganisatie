@@ -181,13 +181,36 @@
             </div>
             <section class="bestemmingen">
                 <div class="bestemmingen-container">
-                    <h2 class="section-title">Hotels En Restaurants</h2>
+                    <h2 class="section-title">Hotels en Restaurants</h2>
                 </div>
             </section>
-            
+            <div class="horeca-container">
+
+            </div>
+            <div class="about-us-container">
+                <div class="about-us-text">
+                    <h1 class="about-us-title">
+                        About Us
+                    </h1>
+                    <br></br>
+                    <p class="about-us-story">
+                    At Go Travel, we're passionate about making your travel experiences unforgettable.<br></br> Whether you're planning a weekend getaway, or a family vacation.<br></br> We're here to simplify the booking process and help you discover the perfect accommodations, flights, and activities tailored to your needs.
+                    </p>
+                </div>
+                <img class="about-us-image" src="img/about-us.png">
+
+            </div>
+        </div>
         </div>
 
     </main>
+    <footer>
+        <div class="footer-container">
+            <div class="socials">
+
+            </div>
+        </div>
+    </footer>
     <script src="https://kit.fontawesome.com/017f40d907.js" crossorigin="anonymous"></script>
     <script src="java.js"></script>
 </body>

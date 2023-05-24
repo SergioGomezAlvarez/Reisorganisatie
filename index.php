@@ -25,7 +25,7 @@
     <header class="header">
         <nav>
             <div class="navigatie-first">
-                <a href="#">+31 6 234 567 89</a>
+                <a href="test.html">+31 6 234 567 89</a>
                 <span class="scheidingslijn"></span>
                 <a href="#">contact@domain.com</a>
             </div>
@@ -110,11 +110,11 @@
                                 <div class="button-set">
                                     <button type="button" id="minus3">
                                         <i class="fa-solid fa-minus"></i>
-                                        </button>
-                                        <input class="passagiers-set" type="number" value="0" id="input3"/>
-                                        <button type="button" id="plus3">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </button>
+                                    </button>
+                                    <input class="passagiers-set" type="number" value="0" id="input3" />
+                                    <button type="button" id="plus3">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
                                 </div>
                             </div>
                             <div class="passagiers-type">
@@ -124,11 +124,11 @@
                                 <div class="button-set">
                                     <button type="button" id="minus4">
                                         <i class="fa-solid fa-minus"></i>
-                                        </button>
-                                        <input class="passagiers-set" type="number" value="0" id="input4"/>
-                                        <button type="button" id="plus4">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </button>
+                                    </button>
+                                    <input class="passagiers-set" type="number" value="0" id="input4" />
+                                    <button type="button" id="plus4">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -148,14 +148,43 @@
                 </div>
             </section>
             <div class="locatie-container">
-
+                <div class="destination-card swiper-slide">
+                    <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
+                    <h5>Big sur</h5>
+                    <h6>Califonia USA</h6>
+                </div>
+                <div class="destination-card swiper-slide">
+                    <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
+                    <h5>Big sur</h5>
+                    <h6>Califonia USA</h6>
+                </div>
+                <div class="destination-card swiper-slide">
+                    <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
+                    <h5>Big sur</h5>
+                    <h6>Califonia USA</h6>
+                </div>
+                <div class="destination-card swiper-slide">
+                    <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
+                    <h5>Big sur</h5>
+                    <h6>Califonia USA</h6>
+                </div>
+                <div class="destination-card swiper-slide">
+                    <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
+                    <h5>Big sur</h5>
+                    <h6>Califonia USA</h6>
+                </div>
+                <div class="destination-card swiper-slide">
+                    <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
+                    <h5>Big sur</h5>
+                    <h6>Califonia USA</h6>
+                </div>
             </div>
             <section class="bestemmingen">
                 <div class="bestemmingen-container">
                     <h2 class="section-title">Hotels En Restaurants</h2>
                 </div>
             </section>
-
+            
         </div>
 
     </main>

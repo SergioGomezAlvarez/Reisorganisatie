@@ -429,7 +429,7 @@ nav {
     max-width: 1378px;
     margin: auto;
     padding-left: 15px;
-    background-color: rosybrown;
+
 }
 
 .section-title {
@@ -437,6 +437,7 @@ nav {
     margin-bottom: 6.4rem;
     font-weight: 700;
     margin-top: 9rem;
+    font-size: 25px;
 }
 
 .locatie-container {
@@ -444,5 +445,22 @@ nav {
     flex-direction: row;
     width: 85%;
     height: 300px;
-    background-color: blue;
+    align-items: center;
 }
+.destination-card{
+    width: 215px;
+    height: 215px;
+}
+.bestemmingen-imgs{
+    object-fit: cover;
+    border-radius: 10px;
+}
+.destination-card h5 {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  .destination-card h6 {
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 19.5px;
+  }

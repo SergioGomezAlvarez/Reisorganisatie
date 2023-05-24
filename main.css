@@ -424,6 +424,7 @@ nav {
 
 .bestemmingen {
     width: 85%;
+    height: 180px;
 }
 
 .bestemmingen-container {
@@ -466,8 +467,8 @@ nav {
 
 .destination-card h6 {
     font-weight: 400;
-    font-size: 1.3rem;
-    line-height: 19.5px;
+    font-size: 15px;
+    line-height: 25.5px;
   }
 .horeca-container {
     display: flex;

@@ -446,7 +446,7 @@ nav {
     display: flex;
     flex-direction: row;
     width: 85%;
-    height: 300px;
+    height: 252px;
     align-items: center;
 }
 
@@ -454,6 +454,48 @@ nav {
     width: 215px;
     height: 215px;
 }
+.radio-btns {
+    gap: 4px;
+    grid-template-columns: repeat(3, 100px);
+  }
+  
+  .radio-btns:hover .radio-btns__btn:not(:hover) {
+    filter: grayscale(100%);
+    opacity: 0.75;
+  }
+  
+  .radio-btns:hover .radio-btns__btn:not(:hover)::after {
+    background-color: rgba(#000, 0.5);
+  }
+  
+  @media (min-width: 30rem) {
+    .radio-btns {
+      grid-template-columns: repeat(3, 150px);
+    }
+  }
+  
+  .radio-btns__btn {
+    position: relative;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .radio-btns__btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, 0);
+    transition: .3s;
+  }
+  
+  .radio-btns__btn img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
 
 .bestemmingen-imgs {
     object-fit: cover;
@@ -520,3 +562,7 @@ nav {
     height: 350px;
     background-color: aqua;
 }
+
+
+
+

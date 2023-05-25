@@ -147,33 +147,33 @@
                     <h2 class="section-title">Populaire bestemmingen</h2>
                 </div>
             </section>
-            <div class="locatie-container">
-                <div class="destination-card swiper-slide">
+            <div class="locatie-container radio-btns">
+                <div class="destination-card radio-btns__btn">
                     <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
                     <h5>Big sur</h5>
                     <h6>Califonia USA</h6>
                 </div>
-                <div class="destination-card swiper-slide">
+                <div class="destination-card radio-btns__btn">
                     <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
                     <h5>Big sur</h5>
                     <h6>Califonia USA</h6>
                 </div>
-                <div class="destination-card swiper-slide">
+                <div class="destination-card radio-btns__btn">
                     <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
                     <h5>Big sur</h5>
                     <h6>Califonia USA</h6>
                 </div>
-                <div class="destination-card swiper-slide">
+                <div class="destination-card radio-btns__btn">
                     <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
                     <h5>Big sur</h5>
                     <h6>Califonia USA</h6>
                 </div>
-                <div class="destination-card swiper-slide">
+                <div class="destination-card radio-btns__btn">
                     <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
                     <h5>Big sur</h5>
                     <h6>Califonia USA</h6>
                 </div>
-                <div class="destination-card swiper-slide">
+                <div class="destination-card radio-btns__btn">
                     <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
                     <h5>Big sur</h5>
                     <h6>Califonia USA</h6>
@@ -185,7 +185,13 @@
                 </div>
             </section>
             <div class="horeca-container">
-
+                <div class="hotel-cards">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                        alt="" width="283" height="349">
+                    <h5>Monastero Santa Rosa Hotel & Spa</h5>
+                    <h6><img src="/Imgs/icons/map-pin-line.png" alt=""> Salerno, Italy</h6>
+                    <div class="ratings"> <img src="/Imgs/icons/rating=5.png" alt=""></div>
+                </div>
             </div>
             <div class="about-us-container">
                 <div class="about-us-text">

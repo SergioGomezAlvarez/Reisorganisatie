@@ -519,3 +519,24 @@ nav {
     height: 350px;
     background-color: aqua;
 }
+
+.footer-socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 350px;
+    font-size: 20px;
+    background-color: red;
+}
+.footer-socials-buttons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 50%;
+    height: 100px;
+    margin-right: 150px;
+    background-color: green;
+}

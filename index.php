@@ -194,7 +194,10 @@
                     </h1>
                     <br></br>
                     <p class="about-us-story">
-                    At Go Travel, we're passionate about making your travel experiences unforgettable.<br></br> Whether you're planning a weekend getaway, or a family vacation.<br></br> We're here to simplify the booking process and help you discover the perfect accommodations, flights, and activities tailored to your needs.
+                        At Go Travel, we're passionate about making your travel experiences unforgettable.<br></br>
+                        Whether you're planning a weekend getaway, or a family vacation.<br></br> We're here to simplify
+                        the booking process and help you discover the perfect accommodations, flights, and activities
+                        tailored to your needs.
                     </p>
                 </div>
                 <img class="about-us-image" src="img/about-us.png">
@@ -206,7 +209,16 @@
     </main>
     <footer>
         <div class="footer-container">
-            <div class="socials">
+            <div class="footer-socials">
+                <p class="footer-socials-text">
+                    We always make our customers happy by providing<br></br> as many choises as possible.
+                </p>
+                <a class="footer-socials-buttons-container"><i class="fa-brands fa-facebook" style="color: #00328a;"></i><i class="fa-brands fa-twitter" style="color: #00328a;"></i><i class="fa-brands fa-instagram" style="color: #00328a;"></i></a>
+            </div>
+            <div class="footer-info">
+
+            </div>
+            <div class="footer-subscribe">
 
             </div>
         </div>

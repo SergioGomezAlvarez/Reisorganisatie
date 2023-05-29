@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" media=" screen and (max-width:768px)" href="mobile.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,9 +25,9 @@
     <header class="header">
         <nav>
             <div class="navigatie-first">
-                <a href="test.html">+31 6 234 567 89</a>
+                <a href="bestemming-index/frankrijk.php">+31 6 234 567 89</a>
                 <span class="scheidingslijn"></span>
-                <a href="#">contact@domain.com</a>
+                <a href="test.html">contact@domain.com</a>
             </div>
             <div class="navigatie-second">
                 <a href="login.php">Login</a>
@@ -144,7 +144,7 @@
         <div class="main-container">
             <section class="bestemmingen">
                 <div class="bestemmingen-container">
-                    <h2 class="section-title">Populaire bestemmingen</h2>
+                    <h2 class="section-title"><a href="" class="section-title">Populaire bestemmingen</a></h2>
                 </div>
             </section>
             <div class="locatie-container radio-btns">
@@ -159,8 +159,8 @@
                     <h6>Califonia USA</h6>
                 </div>
                 <div class="destination-card radio-btns__btn">
-                    <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                    <h5>Big sur</h5>
+                    <img class="bestemmingen-imgs"  src="img/bestemmingen-1.avif" alt="" width="200" height="181">
+                   <a href=""> <h5>Big sur</h5></a>
                     <h6>Califonia USA</h6>
                 </div>
                 <div class="destination-card radio-btns__btn">
@@ -185,12 +185,31 @@
                 </div>
             </section>
             <div class="horeca-container">
-                <div class="hotel-cards">
+                <div class="hotel-card radio-btns">
+                    <div class="hotel-cards radio-btns__btn ">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                            alt=""class="hoetels-imgs" >
+                        <h5>Monastero Santa Rosa Hotel & Spa</h5>
+                        <h6><img src="/Imgs/icons/map-pin-line.png" alt=""> Salerno, Italy</h6>
+                    </div>
+                    <div class="hotel-cards radio-btns__btn">
                     <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                        alt="" width="283" height="349">
-                    <h5>Monastero Santa Rosa Hotel & Spa</h5>
-                    <h6><img src="/Imgs/icons/map-pin-line.png" alt=""> Salerno, Italy</h6>
-                    <div class="ratings"> <img src="/Imgs/icons/rating=5.png" alt=""></div>
+                            alt="" class="hoetels-imgs">
+                        <h5>Monastero Santa Rosa Hotel & Spa</h5>
+                        <h6><img src="/Imgs/icons/map-pin-line.png" alt=""> Salerno, Italy</h6>
+                    </div>
+                    <div class="hotel-cards radio-btns__btn">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                            alt="" class="hoetels-imgs">
+                        <h5>Monastero Santa Rosa Hotel & Spa</h5>
+                        <h6><img src="/Imgs/icons/map-pin-line.png" alt=""> Salerno, Italy</h6>
+                    </div>
+                      <div class="hotel-cards radio-btns__btn">
+                      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                            alt="" class="hoetels-imgs">
+                        <h5>Monastero Santa Rosa Hotel & Spa</h5>
+                        <h6><img src="/Imgs/icons/map-pin-line.png" alt=""> Salerno, Italy</h6>
+                    </div>
                 </div>
             </div>
             <div class="about-us-container">

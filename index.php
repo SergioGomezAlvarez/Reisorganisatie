@@ -159,8 +159,10 @@
                     <h6>Califonia USA</h6>
                 </div>
                 <div class="destination-card radio-btns__btn">
-                    <img class="bestemmingen-imgs"  src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                   <a href=""> <h5>Big sur</h5></a>
+                    <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
+                    <a href="">
+                        <h5>Big sur</h5>
+                    </a>
                     <h6>Califonia USA</h6>
                 </div>
                 <div class="destination-card radio-btns__btn">
@@ -188,24 +190,24 @@
                 <div class="hotel-card radio-btns">
                     <div class="hotel-cards radio-btns__btn ">
                         <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                            alt=""class="hoetels-imgs" >
-                        <h5>Monastero Santa Rosa Hotel & Spa</h5>
-                        <h6><img src="/Imgs/icons/map-pin-line.png" alt=""> Salerno, Italy</h6>
-                    </div>
-                    <div class="hotel-cards radio-btns__btn">
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                             alt="" class="hoetels-imgs">
                         <h5>Monastero Santa Rosa Hotel & Spa</h5>
                         <h6><img src="/Imgs/icons/map-pin-line.png" alt=""> Salerno, Italy</h6>
                     </div>
                     <div class="hotel-cards radio-btns__btn">
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                             alt="" class="hoetels-imgs">
                         <h5>Monastero Santa Rosa Hotel & Spa</h5>
                         <h6><img src="/Imgs/icons/map-pin-line.png" alt=""> Salerno, Italy</h6>
                     </div>
-                      <div class="hotel-cards radio-btns__btn">
-                      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    <div class="hotel-cards radio-btns__btn">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                            alt="" class="hoetels-imgs">
+                        <h5>Monastero Santa Rosa Hotel & Spa</h5>
+                        <h6><img src="/Imgs/icons/map-pin-line.png" alt=""> Salerno, Italy</h6>
+                    </div>
+                    <div class="hotel-cards radio-btns__btn">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                             alt="" class="hoetels-imgs">
                         <h5>Monastero Santa Rosa Hotel & Spa</h5>
                         <h6><img src="/Imgs/icons/map-pin-line.png" alt=""> Salerno, Italy</h6>
@@ -236,7 +238,7 @@
         <div class="footer-container">
             <div class="footer-socials">
                 <p class="footer-socials-text">
-                    We always make our customers happy by providing<br></br> as many choises as possible.
+                    We maken altijd onze bezoekers blij door het<br></br> geven van zo veel mogelijk opties.
                 </p>
                 <a class="footer-socials-buttons-container"><i class="fa-brands fa-facebook facebook"></i><i
                         class="fa-brands fa-twitter twitter" style="color: #00328a;"></i><i
@@ -244,18 +246,18 @@
             </div>
             <div class="footer-info">
                 <div class="footer-info-text">
-                    <h1 class="footer-text-title">About</h1>
+                    <h1 class="footer-text-title">Over Ons</h1>
                     <div class="footer-text-content-bg">
-                        <p class="footer-text-content">About us</p>
-                        <p class="footer-text-content">Features</p>
-                        <p class="footer-text-content">News</p>
-                        <p class="footer-text-content">About us</p>
+                        <p class="footer-text-content">Over ons</p>
+                        <p class="footer-text-content">Functies</p>
+                        <p class="footer-text-content">Nieuws</p>
+                        <p class="footer-text-content">Over ons</p>
                     </div>
                 </div>
                 <div class="footer-info-text-2">
-                    <h1 class="footer-text-title">Company</h1>
+                    <h1 class="footer-text-title">Bedrijf</h1>
                     <div class="footer-text-content-bg">
-                        <p class="footer-text-content">Partner with us</p>
+                        <p class="footer-text-content">Partner met ons</p>
                         <p class="footer-text-content">FAQ</p>
                         <p class="footer-text-content">Blog</p>
                     </div>
@@ -263,14 +265,26 @@
                 <div class="footer-info-text">
                     <h1 class="footer-text-title">Support</h1>
                     <div class="footer-text-content-bg">
-                        <p class="footer-text-content">About us</p>
-                        <p class="footer-text-content">Features</p>
-                        <p class="footer-text-content">News</p>
-                        <p class="footer-text-content">About us</p>
+                        <p class="footer-text-content">Over ons</p>
+                        <p class="footer-text-content">Functies</p>
+                        <p class="footer-text-content">Nieuws</p>
+                        <p class="footer-text-content">Over ons</p>
                     </div>
                 </div>
             </div>
             <div class="footer-subscribe">
+                <div class="footer-subscribe-text">
+                    <h1 class="subscribe-text">Abonneer op onze bestemming review nieuwsbrieven</h1>
+                </div>
+                <div class="footer-email-bg">
+                    <div class="footer-email-container">
+                        <i class="fa-regular fa-envelope envelope" style="color: #ffc800;"></i>
+                        <p>Uw Email</p>
+                    </div>
+                    <a class="email-send-button">
+                        <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
+                    </a>
+                </div>
 
             </div>
         </div>

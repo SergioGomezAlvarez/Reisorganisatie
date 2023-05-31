@@ -4,7 +4,9 @@
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
 }
-
+html,body{
+    font-size: 16px;
+}
 nav {
     display: flex;
     width: 98%;
@@ -50,7 +52,7 @@ nav {
 }
 
 .header {
-    background: url(img/Showcase-Cover.png) no-repeat center center fixed;
+    background: url(../img/Showcase-Cover.png) no-repeat center center fixed;
     min-height: 800px;
     border-radius: 0 0 50px 50px;
     display: flex;
@@ -435,11 +437,12 @@ nav {
 }
 
 .section-title {
-    font-size: var(--title-font-size);
     margin-bottom: 6.4rem;
     font-weight: 700;
     margin-top: 9rem;
     font-size: 25px;
+    text-decoration: none;
+    color: #000;
 }
 
 .locatie-container {
@@ -494,10 +497,16 @@ nav {
 
 .radio-btns__btn img {
     display: block;
-    width: 100%;
+    width: 95%;
     max-width: 100%;
 }
 
+ .radio-btns__btn{
+    transition: transform .2s; /* Animation */
+ }
+ .radio-btns__btn:hover{
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+ }
 .bestemmingen-imgs {
     object-fit: cover;
     border-radius: 10px;
@@ -516,10 +525,10 @@ nav {
 
 .horeca-container {
     display: flex;
-    flex-direction: row;
+  justify-content: space-around;
     width: 85%;
     height: 400px;
-    background-color: blue;
+
 }
 
 .about-us-container {
@@ -556,7 +565,7 @@ nav {
 
 .about-us-story {
     display: flex;
-    font-size: 20px;
+    font-size: 1.1rem;
 }
 
 .footer-container {
@@ -566,6 +575,45 @@ nav {
     flex-direction: row;
     background-color: aqua;
 }
+.hotel-card{
+    width: 85rem;   
+    display: flex;
+    justify-content: space-around;
+    
+}
+.hoetels-imgs{
+    object-fit: cover;
+    border-radius: 10px;
+    width: 3rem;
+}
+.hotel-cards{ 
+    width: 22rem;
+    transition: transform .2s;
+}
+.hotel-cards:hover{
+    transform: scale(1.1);
+}
+  .hotel-cards h5 {
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+  
+  .hotel-cards h6 {
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 19.5px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column-reverse;
+  }
+  
+  .ratings {
+    position: absolute;
+    bottom: 1px;
+    right: 0;
+  }
 
 .footer-socials {
     display: flex;

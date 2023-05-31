@@ -219,10 +219,37 @@
                 <p class="footer-socials-text">
                     We always make our customers happy by providing<br></br> as many choises as possible.
                 </p>
-                <a class="footer-socials-buttons-container"><i class="fa-brands fa-facebook" style="color: #00328a;"></i><i class="fa-brands fa-twitter" style="color: #00328a;"></i><i class="fa-brands fa-instagram" style="color: #00328a;"></i></a>
+                <a class="footer-socials-buttons-container"><i class="fa-brands fa-facebook facebook"></i><i
+                        class="fa-brands fa-twitter twitter" style="color: #00328a;"></i><i
+                        class="fa-brands fa-instagram instagram" style="color: #00328a;"></i></a>
             </div>
             <div class="footer-info">
-
+                <div class="footer-info-text">
+                    <h1 class="footer-text-title">About</h1>
+                    <div class="footer-text-content-bg">
+                        <p class="footer-text-content">About us</p>
+                        <p class="footer-text-content">Features</p>
+                        <p class="footer-text-content">News</p>
+                        <p class="footer-text-content">About us</p>
+                    </div>
+                </div>
+                <div class="footer-info-text-2">
+                    <h1 class="footer-text-title">Company</h1>
+                    <div class="footer-text-content-bg">
+                        <p class="footer-text-content">Partner with us</p>
+                        <p class="footer-text-content">FAQ</p>
+                        <p class="footer-text-content">Blog</p>
+                    </div>
+                </div>
+                <div class="footer-info-text">
+                    <h1 class="footer-text-title">Support</h1>
+                    <div class="footer-text-content-bg">
+                        <p class="footer-text-content">About us</p>
+                        <p class="footer-text-content">Features</p>
+                        <p class="footer-text-content">News</p>
+                        <p class="footer-text-content">About us</p>
+                    </div>
+                </div>
             </div>
             <div class="footer-subscribe">
 

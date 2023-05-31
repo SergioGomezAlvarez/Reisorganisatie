@@ -1,0 +1,85 @@
+.groot-div-bestemming{
+    width: 100%;
+    padding: 0.5rem;
+    background-color: rgb(130, 67, 67);
+    box-sizing: border-box; 
+}
+
+.Terug-en-naam{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   width: 100%;
+    background-color: #060505;
+}
+.terug-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.5rem;
+    height: 2rem;
+    margin: 0.5rem;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 1rem 1rem 1rem 1rem;
+}
+.terug-button:hover{
+    background-color: #344897;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.fa-arrow-left{
+    font-size: 1rem;
+    color: #060505;
+    text-decoration: none;
+}
+.terug-div{
+    width: 19%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.Terug-en-naam p{
+    font-size: 1.5rem;
+    color: white;
+    margin: 2.9rem;
+
+}
+.title-bestemming{
+    font-size: 2rem;
+    color: white;
+    margin: 2.9rem;
+}
+.bestemming-img-big-div{
+    width: 100%;
+    height:27rem;
+    background-color: rgb(89, 162, 162);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bestemming{
+    width: 58%;
+    height: 100%;
+    display: flex;
+    object-fit: cover;
+    background: #ffffff;
+}
+.links-div-img{
+    width: 45%;
+    height: 100%;
+    background-color: black;
+}
+.rechts-div-img{
+    width: 55%;
+    height: 100%;
+    background-color: rgb(111, 52, 52);
+}
+.bovenste-img{
+    width: 50%;
+    height: 50%;
+    background-color: rgb(111, 52, 52);
+}

@@ -515,6 +515,10 @@ nav {
     font-size: 1.6rem;
     font-weight: 500;
 }
+.destination-card  a{
+    text-decoration: none;
+    color: black;
+}
 
 .destination-card h6 {
     font-weight: 400;

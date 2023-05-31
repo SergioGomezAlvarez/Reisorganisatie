@@ -25,7 +25,7 @@
     <header class="header">
         <nav>
             <div class="navigatie-first">
-                <a href="bestemming-index/frankrijk.php">+31 6 234 567 89</a>
+                <a href="bestemming.php">+31 6 234 567 89</a>
                 <span class="scheidingslijn"></span>
                 <a href="test.html">contact@domain.com</a>
             </div>
@@ -150,33 +150,33 @@
             <div class="locatie-container radio-btns">
                 <div class="destination-card radio-btns__btn">
                     <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                    <h5>Big sur</h5>
-                    <h6>Califonia USA</h6>
+                    <a href="bestemming.php"><h5>Big sur</h5></a>
+                   <a href="bestemming.php"><h6>Califonia USA</h6></a>
                 </div>
                 <div class="destination-card radio-btns__btn">
                     <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                    <h5>Big sur</h5>
-                    <h6>Califonia USA</h6>
+                    <a href="bestemming.php"><h5>Big sur</h5></a>
+                   <a href="bestemming.php"><h6>Califonia USA</h6></a>
                 </div>
                 <div class="destination-card radio-btns__btn">
                     <img class="bestemmingen-imgs"  src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                   <a href=""> <h5>Big sur</h5></a>
-                    <h6>Califonia USA</h6>
+                   <a href="bestemming.php"><h5>Big sur</h5></a>
+                   <a href="bestemming.php"><h6>Califonia USA</h6></a>
                 </div>
                 <div class="destination-card radio-btns__btn">
                     <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                    <h5>Big sur</h5>
-                    <h6>Califonia USA</h6>
+                    <a href="bestemming.php"><h5>Big sur</h5></a>
+                   <a href="bestemming.php"><h6>Califonia USA</h6></a>
                 </div>
                 <div class="destination-card radio-btns__btn">
                     <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                    <h5>Big sur</h5>
-                    <h6>Califonia USA</h6>
+                    <a href="bestemming.php"><h5>Big sur</h5></a>
+                   <a href="bestemming.php"><h6>Califonia USA</h6></a>
                 </div>
                 <div class="destination-card radio-btns__btn">
                     <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                    <h5>Big sur</h5>
-                    <h6>Califonia USA</h6>
+                    <a href="bestemming.php"><h5>Big sur</h5></a>
+                   <a href="bestemming.php"><h6>Califonia USA</h6></a>
                 </div>
             </div>
             <section class="bestemmingen">

@@ -115,7 +115,7 @@ nav {
 
 .mijn-reservering-text {
     color: white;
-    font-size: 23px;
+    font-size: 1.4rem;
     font-weight: 60;
     text-decoration: none;
 }
@@ -131,7 +131,7 @@ nav {
     border: none;
     background: none;
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     color: white;
     text-decoration: none;
     cursor: pointer;
@@ -162,12 +162,12 @@ nav {
 }
 
 .top-text1 {
-    font-size: 60px;
+    font-size: 3.75rem;
     color: white;
 }
 
 .top-text2 {
-    font-size: 40px;
+    font-size: 2.5rem;
     color: white;
 }
 

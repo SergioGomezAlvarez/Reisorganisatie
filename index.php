@@ -149,9 +149,9 @@
             </section>
             <div class="locatie-container radio-btns">
                 <div class="destination-card radio-btns__btn">
-                    <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                    <a href="bestemming.php"><h5>Big sur</h5></a>
-                   <a href="bestemming.php"><h6>Califonia USA</h6></a>
+                    <img class="bestemmingen-imgs" src="img/Frankijk-parijs-1.2.jpg" alt="" width="200" height="181">
+                    <a href="bestemming.php"><h5>Parijs</h5></a>
+                   <a href="bestemming.php"><h6>Frankrijk</h6></a>
                 </div>
                 <div class="destination-card radio-btns__btn">
                     <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">

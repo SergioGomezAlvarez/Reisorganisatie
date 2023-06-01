@@ -1,7 +1,6 @@
 .groot-div-bestemming{
     width: 100%;
     padding: 0.5rem;
-    background-color: rgb(130, 67, 67);
     box-sizing: border-box; 
 }
 
@@ -56,7 +55,6 @@
 .bestemming-img-big-div{
     width: 100%;
     height:27rem;
-    background-color: rgb(89, 162, 162);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,20 +64,76 @@
     height: 100%;
     display: flex;
     object-fit: cover;
-    background: #ffffff;
+    gap: 3px;
 }
 .links-div-img{
     width: 45%;
     height: 100%;
-    background-color: black;
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
 }
 .rechts-div-img{
     width: 55%;
     height: 100%;
-    background-color: rgb(111, 52, 52);
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    
 }
 .bovenste-img{
-    width: 50%;
+    width: 100%;
     height: 50%;
-    background-color: rgb(111, 52, 52);
+    background-image: url(../img/Frankijk-parijs-1.2.jpg);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.onderste-img{
+    width: 100%;
+    height: 50%;
+    background-image: url(../img/frankrijk-paris2.jpg); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.omschrihhjving-bestemming{
+    width: 100%;
+    height: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+.rechts-img-onder{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    gap: 3px;
+  
+}
+.links-img{
+    width: 50%;
+    height: 100%;
+    background-image: url(../img/hoetl-frankrijk.jpg    );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.rechts-img{
+    width: 50%;
+    height: 100%;
+    background-image: url(../img/LeJulesVerne2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.omschrihhjving-titl{
+    font-size: 1rem;
+    color: #060505;
+    margin: 0.5rem;
+
 }

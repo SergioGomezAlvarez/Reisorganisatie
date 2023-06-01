@@ -61,27 +61,85 @@
                         <a class="terug-button" href="index.php"><i class="fas fa-arrow-left">Terug</i></a>
                     </div>
                     <h1 class="top-text1 title-bestemming">
-                        de naam van de vakantie
+                        Jou vakantie naar <span class="bestemming-naam">Peijs</span>
                     </h1>
                     <div style="width: 242px;"></div>
                 </div>
             </div>
             <div class="bestemming-img-big-div">
-                <div class="bestemming">
-                    <div class="links-div-img">
-                        <div class="bovenste-img"></div>
+                <div class="bestemming radio-btns">
+                    <div class="links-div-img ">
+                        <div class="bovenste-img "></div>
                         <div class="onderste-img"></div>
                     </div>
-                    <div class="rechts-div-img"></div>
+                    <div class="rechts-div-img">
+                        <div class="omschrihhjving-bestemming radio-btns__btn">
+                            <h1 class="omschrihhjving-titl">Parijs, de "Stad van de Liefde" en de thuisbasis van iconische bezienswaardigheden zoals de Eiffeltoren, het Louvre en de Notre-Dame. Het biedt ook heerlijk eten, prachtige architectuur en een romantische sfeer.</h1>
+                            <h2 class="omschrihhjving-titl" >Hotel suggestie: Hotel Le Meurice, een luxueus 5-sterrenhotel gelegen in het hart van Parijs, met elegante kamers, een Michelin-sterrenrestaurant en een fantastisch uitzicht op de stad.</h2>
+                            <h3 class="omschrihhjving-titl">Vlucht suggestie: KLM, een van de beste luchtvaartmaatschappijen ter wereld, met een uitstekende service en een breed scala aan bestemmingen.</h3>
+                        </div>
+                        <div class="rechts-img-onder">
+                            <div class="links-img"></div>
+                            <div class="rechts-img"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
     </header>
-
     <footer>
         <div class="footer-container">
-            <div class="socials">
+            <div class="footer-socials">
+                <p class="footer-socials-text">
+                    We maken altijd onze bezoekers blij door het<br></br> geven van zo veel mogelijk opties.
+                </p>
+                <a class="footer-socials-buttons-container"><i class="fa-brands fa-facebook facebook"></i><i
+                        class="fa-brands fa-twitter twitter" style="color: #00328a;"></i><i
+                        class="fa-brands fa-instagram instagram" style="color: #00328a;"></i></a>
+            </div>
+            <div class="footer-info">
+                <div class="footer-info-text">
+                    <h1 class="footer-text-title">Over Ons</h1>
+                    <div class="footer-text-content-bg">
+                        <p class="footer-text-content">Over ons</p>
+                        <p class="footer-text-content">Functies</p>
+                        <p class="footer-text-content">Nieuws</p>
+                        <p class="footer-text-content">Over ons</p>
+                    </div>
+                </div>
+                <div class="footer-info-text-2">
+                    <h1 class="footer-text-title">Bedrijf</h1>
+                    <div class="footer-text-content-bg">
+                        <p class="footer-text-content">Partner met ons</p>
+                        <p class="footer-text-content">FAQ</p>
+                        <p class="footer-text-content">Blog</p>
+                    </div>
+                </div>
+                <div class="footer-info-text">
+                    <h1 class="footer-text-title">Support</h1>
+                    <div class="footer-text-content-bg">
+                        <p class="footer-text-content">Over ons</p>
+                        <p class="footer-text-content">Functies</p>
+                        <p class="footer-text-content">Nieuws</p>
+                        <p class="footer-text-content">Over ons</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-subscribe">
+                <div class="footer-subscribe-text">
+                    <h1 class="subscribe-text">Abonneer op onze bestemming review nieuwsbrieven</h1>
+                </div>
+                <div class="footer-email-bg">
+                    <div class="footer-email-container">
+                        <i class="fa-regular fa-envelope envelope" style="color: #ffc800;"></i>
+                        <p>Uw Email</p>
+                    </div>
+                    <a class="email-send-button">
+                        <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
+                    </a>
+                </div>
+
             </div>
         </div>
     </footer>

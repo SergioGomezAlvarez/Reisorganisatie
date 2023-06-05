@@ -277,10 +277,10 @@
                 <div class="footer-email-bg">
                     <div class="footer-email-container">
                         <i class="fa-regular fa-envelope envelope" style="color: #ffc800;"></i>
-                        <p>Uw Email</p>
+                        <p>Uw Email </p>
                     </div>
                     <a class="email-send-button">
-                        <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
+                        <i class="fa-solid fa-arrow-right" style="color: #ffffff;"><a href="mailto:gebruikersnaam@emailadres.nl?subject=Tekst">Stuur een e-mail</a></i>
                     </a>
                 </div>
 

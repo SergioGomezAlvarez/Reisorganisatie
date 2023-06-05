@@ -61,7 +61,7 @@
                         <a class="terug-button" href="index.php"><i class="fas fa-arrow-left">Terug</i></a>
                     </div>
                     <h1 class="top-text1 title-bestemming">
-                        Jou vakantie naar <span class="bestemming-naam">Peijs</span>
+                        Jou vakantie naar <span class="bestemming-naam">Perijs</span>
                     </h1>
                     <div style="width: 242px;"></div>
                 </div>
@@ -74,9 +74,15 @@
                     </div>
                     <div class="rechts-div-img">
                         <div class="omschrihhjving-bestemming radio-btns__btn">
-                            <h1 class="omschrihhjving-titl">Parijs, de "Stad van de Liefde" en de thuisbasis van iconische bezienswaardigheden zoals de Eiffeltoren, het Louvre en de Notre-Dame. Het biedt ook heerlijk eten, prachtige architectuur en een romantische sfeer.</h1>
-                            <h2 class="omschrihhjving-titl" >Hotel suggestie: Hotel Le Meurice, een luxueus 5-sterrenhotel gelegen in het hart van Parijs, met elegante kamers, een Michelin-sterrenrestaurant en een fantastisch uitzicht op de stad.</h2>
-                            <h3 class="omschrihhjving-titl">Vlucht suggestie: KLM, een van de beste luchtvaartmaatschappijen ter wereld, met een uitstekende service en een breed scala aan bestemmingen.</h3>
+                            <h1 class="omschrihhjving-titl">Parijs, de "Stad van de Liefde" en de thuisbasis van
+                                iconische bezienswaardigheden zoals de Eiffeltoren, het Louvre en de Notre-Dame. Het
+                                biedt ook heerlijk eten, prachtige architectuur en een romantische sfeer.</h1>
+                            <h2 class="omschrihhjving-titl">Hotel suggestie: Hotel Le Meurice, een luxueus
+                                5-sterrenhotel gelegen in het hart van Parijs, met elegante kamers, een
+                                Michelin-sterrenrestaurant en een fantastisch uitzicht op de stad.</h2>
+                            <h3 class="omschrihhjving-titl">Vlucht suggestie: KLM, een van de beste
+                                luchtvaartmaatschappijen ter wereld, met een uitstekende service en een breed scala aan
+                                bestemmingen.</h3>
                         </div>
                         <div class="rechts-img-onder">
                             <div class="links-img"></div>
@@ -86,8 +92,79 @@
                 </div>
             </div>
         </div>
-
     </header>
+    <main>
+        <div class="boeken-vakantie">
+            <div class="zoek-reis-big-div boeken-big-div">
+                <section class="boeken-titl">
+                    <p>Boeken voor deze vakantie</p>
+                </section>
+                <div class="zoek-reis-div">
+                    <div class="reisdatum">
+                        <p>Reisdatum</p>
+                        <input type="date" value="2023-05-03">
+                    </div>
+                    <div class="retourdatum">
+                        <p>Retourdatum</p>
+                        <input type="date" value="2023-05-03">
+                    </div>
+                    <div class="passagier">
+                        <p>Passagier</p>
+                        <button onclick="myFunction()"> +0 Passagier</i></button>
+                        <div id="passagier-keizen" style="display:none">
+                            <div class="passagiers-types">
+                                <div class="passagiers-type">
+                                    <div class="Volwassenen">
+                                        <p>Volwassenen</p>
+                                    </div>
+                                    <div class="button-set">
+                                        <button type="button" id="minus2">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </button>
+                                        <input class="passagiers-set" type="number" value="0" id="input2" />
+                                        <button type="button" id="plus2">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="passagiers-type">
+                                    <div class="Volwassenen">
+                                        <p>kinderen</p>
+                                    </div>
+                                    <div class="button-set">
+                                        <button type="button" id="minus3">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </button>
+                                        <input class="passagiers-set" type="number" value="0" id="input3" />
+                                        <button type="button" id="plus3">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="passagiers-type">
+                                    <div class="Volwassenen">
+                                        <p>Zuigeling</p>
+                                    </div>
+                                    <div class="button-set">
+                                        <button type="button" id="minus4">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </button>
+                                        <input class="passagiers-set" type="number" value="0" id="input4" />
+                                        <button type="button" id="plus4">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kosten-vakantie">
+                
+            </div>
+        </div>
+    </main>
     <footer>
         <div class="footer-container">
             <div class="footer-socials">

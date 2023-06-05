@@ -133,6 +133,7 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
                 <div class="zoek_knop">
                     <button type="button" class="zoek_knop_button">Zoek</button>

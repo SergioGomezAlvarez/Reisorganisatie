@@ -21,7 +21,7 @@
 </head>
 
 </head>
-
+SELECT * FROM `bestemmingen` WHERE `bestemming` = 'ID1'
 <body>
     <header class="header ">
         <nav>
@@ -102,11 +102,11 @@
                 <div class="zoek-reis-div">
                     <div class="reisdatum">
                         <p>Reisdatum</p>
-                        <input type="date" value="2023-05-03">
+                        <input name="reisdatum" type="date" value="2023-05-03">
                     </div>
                     <div class="retourdatum">
                         <p>Retourdatum</p>
-                        <input type="date" value="2023-05-03">
+                        <input name="retourdatum" type="date" value="2023-05-03">
                     </div>
                     <div class="passagier">
                         <p>Passagier</p>
@@ -158,11 +158,28 @@
                             </div>
                         </div>
                     </div>
+                    <div class="zoek_knop">
+                        <button type="button" class="zoek_knop_button">Zoek</button>
+                    </div>
                 </div>
             </div>
-            <div class="kosten-vakantie">
+            <div class="kosten-vakantie-big-div">
+                <div class="kosten-vakanti">
+                    <?php
 
+                    $begin = new DateTime('2010-05-01');
+                    $end = new DateTime('2010-05-10');
+
+                    $interval = DateInterval::createFromDateString('1 day');
+                    $period = new DatePeriod($begin, $interval, $end);
+
+                    foreach ($period as $dt) {
+                        echo "<div class='block'>&euro; 1000,- " . $dt->format("l d-m-Y \n") . "</div>";
+                    }
+                    ?>
+                </div>
             </div>
+        </div>
         </div>
     </main>
     <div class="hotel-titel-bg">

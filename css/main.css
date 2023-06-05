@@ -761,3 +761,8 @@ nav {
     border-radius: 10px;
     background-color: #00328a;
 }
+
+.email-send-button:hover{
+    background-color: #031637;
+    cursor: pointer;
+}

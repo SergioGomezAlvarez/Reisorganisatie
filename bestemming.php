@@ -161,10 +161,48 @@
                 </div>
             </div>
             <div class="kosten-vakantie">
-                
+
             </div>
         </div>
     </main>
+    <div class="hotel-titel-bg">
+        <h1 class="hotel-titel">Hotel Le Meurice</h1>
+    </div>
+    <div class="hotel-info-container">
+        <div class="hotel-info-bg">
+            <p class="hotel-info">
+                Algemene beschrijving<br></br>Hotel Le Meurice is een elegant vijfsterrenhotel gelegen in het hart van
+                Parijs. Het hotel biedt een luxueuze en verfijnde sfeer, met prachtig ingerichte kamers en uitstekende
+                faciliteiten. Of je nu een stedentrip maakt of een romantisch uitje plant, Hotel Le Meurice biedt de
+                perfecte setting voor een onvergetelijk verblijf.<br></br>Ligging & Omgeving<br></br>Gelegen aan de
+                prestigieuze Rue de Rivoli, tegenover de prachtige Tuileries-tuinen en op steenworp afstand van het
+                Louvre, geniet Hotel Le Meurice van een ongeëvenaarde locatie. Vanuit het hotel heb je gemakkelijk
+                toegang tot de belangrijkste bezienswaardigheden van Parijs, waaronder de Champs-Élysées, de Eiffeltoren
+                en de Notre-Dame. Daarnaast bevinden zich in de nabije omgeving exclusieve boetieks, restaurants en
+                theaters, waardoor je kunt genieten van het beste wat Parijs te bieden
+                heeft.<br></br>Kamers<br></br>Hotel Le Meurice beschikt over stijlvolle en ruime kamers, prachtig
+                ingericht met aandacht voor detail. Elke kamer is voorzien van moderne voorzieningen, zoals een
+                flatscreen-tv, minibar, airconditioning, verwarming, telefoon, gratis WiFi en een luxueuze badkamer met
+                badjassen, slippers en hoogwaardige toiletartikelen. Vanuit de kamers heb je vaak een adembenemend
+                uitzicht op de stad Parijs.<br></br>Faciliteiten<br></br>Hotel Le Meurice biedt een scala aan
+                uitstekende faciliteiten om je verblijf zo comfortabel mogelijk te maken. Begin je dag met een heerlijk
+                ontbijt in het elegante restaurant van het hotel, waar je kunt genieten van een uitgebreid buffet. Voor
+                een culinaire ervaring van wereldklasse kun je terecht in het met drie Michelin-sterren bekroonde
+                restaurant van het hotel, waar gerechten worden bereid door een bekroonde chef-kok.<br></br>Na een dag
+                verkennen van de stad kun je ontspannen in de prachtige spa van het hotel, compleet met een
+                binnenzwembad, sauna, stoombad en een scala aan verkwikkende behandelingen. Hotel Le Meurice beschikt
+                ook over goed uitgeruste fitnessfaciliteiten voor degenen die hun trainingsroutine willen behouden
+                tijdens hun verblijf.<br></br>Daarnaast biedt het hotel een conciërgedienst, limousineservice, gratis
+                WiFi in alle ruimtes, een elegante loungebar waar je kunt genieten van verfrissende drankjes, en
+                vergader- en evenementenfaciliteiten voor zakelijke reizigers.<br></br>Vervoer naar Hotel Le Meurice is
+                handig met de nabijgelegen metrostations en het hotel kan ook vervoer van en naar de luchthaven regelen
+                voor gasten die dat wensen.<br></br>Kom je met de auto naar Hotel Le Meurice? Het hotel biedt
+                parkeerservice voor gasten, zodat je zorgeloos kunt genieten van je verblijf in Parijs.<br></br>Hotel Le
+                Meurice verwelkomt je met zijn elegante charme, uitstekende service en ongeëvenaarde locatie, en belooft
+                een onvergetelijk verblijf in de betoverende stad Parijs.
+            </p>
+        </div>
+    </div>
     <footer>
         <div class="footer-container">
             <div class="footer-socials">

@@ -1,18 +1,19 @@
-.groot-div-bestemming{
+.groot-div-bestemming {
     width: 100%;
     padding: 0.5rem;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-.Terug-en-naam{
+.Terug-en-naam {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-   width: 100%;
+    width: 100%;
     background-color: #060505;
 }
-.terug-button{
+
+.terug-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,94 +27,107 @@
     cursor: pointer;
     border-radius: 1rem 1rem 1rem 1rem;
 }
-.terug-button:hover{
+
+.terug-button:hover {
     background-color: #344897;
     transform: scale(1.1);
     transition: 0.5s;
 }
-.fa-arrow-left{
+
+.fa-arrow-left {
     font-size: 1rem;
     color: #060505;
     text-decoration: none;
 }
-.terug-div{
+
+.terug-div {
     width: 19%;
     display: flex;
     flex-direction: row-reverse;
 }
-.Terug-en-naam p{
+
+.Terug-en-naam p {
     font-size: 1.5rem;
     color: white;
     margin: 2.9rem;
 
 }
-.title-bestemming{
+
+.title-bestemming {
     font-size: 2rem;
     color: white;
     margin: 2.9rem;
 }
-.bestemming-img-big-div{
+
+.bestemming-img-big-div {
     width: 100%;
-    height:27rem;
+    height: 27rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.bestemming{
+
+.bestemming {
     width: 58%;
     height: 100%;
     display: flex;
     object-fit: cover;
     gap: 3px;
 }
-.links-div-img{
+
+.links-div-img {
     width: 45%;
     height: 100%;
     display: flex;
     gap: 3px;
     flex-direction: column;
 }
-.rechts-div-img{
+
+.rechts-div-img {
     width: 55%;
     height: 100%;
     display: flex;
     gap: 3px;
     flex-direction: column;
-    
+
 }
-.bovenste-img{
+
+.bovenste-img {
     width: 100%;
     height: 50%;
     background-image: url(../img/Frankijk-parijs-1.2.jpg);
 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.onderste-img{
-    width: 100%;
-    height: 50%;
-    background-image: url(../img/frankrijk-paris2.jpg); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
-.omschrihhjving-bestemming{
+
+.onderste-img {
+    width: 100%;
+    height: 50%;
+    background-image: url(../img/frankrijk-paris2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.omschrihhjving-bestemming {
     width: 100%;
     height: 50%;
     background-color: rgb(255, 255, 255);
 }
 
-.rechts-img-onder{
+.rechts-img-onder {
     width: 100%;
     height: 50%;
     display: flex;
     gap: 3px;
-  
+
 }
-.links-img{
+
+.links-img {
     width: 50%;
     height: 100%;
     background-image: url(../img/hoetl-frankrijk.jpg    );
@@ -122,7 +136,8 @@
     background-size: cover;
     position: relative;
 }
-.rechts-img{
+
+.rechts-img {
     width: 50%;
     height: 100%;
     background-image: url(../img/LeJulesVerne2.jpg);
@@ -131,28 +146,68 @@
     background-size: cover;
     position: relative;
 }
-.omschrihhjving-titl{
+
+.omschrihhjving-titl {
     font-size: 1rem;
     color: #060505;
     margin: 0.5rem;
 
 }
-.boeken-big-div{
+
+.boeken-big-div {
     display: flex;
     align-items: center;
     justify-content: center;
     justify-content: space-around;
 }
-.boeken-titl{
+
+.boeken-titl {
     font-size: 3rem;
     color: #060505;
     margin: 0.5rem;
 }
-.kosten-vakantie{
+
+.kosten-vakantie {
     width: 1519px;
     height: 276px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #344897;
+}
+
+.hotel-titel-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-top: 100px;
+}
+
+.hotel-titel {
+    color: black;
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+.hotel-info-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 900px;
+}
+
+.hotel-info-bg {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 870px;
+    padding-top: 30px;
+}
+
+.hotel-info {
+    color: black;
+    font-size: 1.1rem;
+    font-weight: lighter;
 }

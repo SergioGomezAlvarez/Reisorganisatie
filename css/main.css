@@ -335,6 +335,7 @@ nav {
 }
 
 .passagier {
+    z-index: 99999;
     width: 120px;
     height: 56px;
     background-color: rgba(150, 150, 150, 0.51);
@@ -363,7 +364,6 @@ nav {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     display: flex;
-
     justify-content: space-around;
     align-items: center;
     box-shadow: 4px 14px 28px rgba(0, 0, 0, 0.1);

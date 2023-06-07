@@ -245,6 +245,64 @@ try {
                 ?>
         </div>
     </div>
+    <div class="faciliteiten-titel-bg">
+        <h1 class="faciliteiten-titel">Faciliteiten</h1>
+    </div>
+    <div class="faciliteiten-container">
+        <div class="faciliteiten-algemeen">
+            <div class="algemeen-titel">
+                <i class="fa-solid fa-circle-info circle-info" style="color: #8f8f8f;"></i>
+                <h1 class="algemeen-text">Algemeen</h1>
+            </div>
+            <div class="line">
+            </div>
+            <div class="algemeen-topics">
+                <div class="topics">
+                    <i class="fa-solid fa-check check" style="color: #00ff04;"></i>
+                    <p class="topics-text">Airco</p>
+                </div>
+                <div class="topics">
+                    <i class="fa-solid fa-check check" style="color: #00ff04;"></i>
+                    <p class="topics-text">Bar</p>
+                </div>
+                <div class="topics">
+                    <i class="fa-solid fa-check check" style="color: #00ff04;"></i>
+                    <p class="topics-text">Binnenzwembad</p>
+                </div>
+                <div class="topics">
+                    <i class="fa-solid fa-check check" style="color: #00ff04;"></i>
+                    <p class="topics-text">Parkeerplaats</p>
+                </div>
+                <div class="topics">
+                    <i class="fa-solid fa-check check" style="color: #00ff04;"></i>
+                    <p class="topics-text">Kluisje</p>
+                </div>
+                <div class="topics">
+                    <i class="fa-solid fa-check check" style="color: #00ff04;"></i>
+                    <p class="topics-text">Rolstoelvriendelijk</p>
+                </div>
+            </div>
+        </div>
+        <div class="faciliteiten-activiteiten">
+            <div class="activiteiten-titel">
+                <i class="fa-solid fa-baseball baseball" style="color: #8f8f8f;"></i>
+                <h1 class="algemeen-text">Activiteiten</h1>
+            </div>
+            <div class="line">
+            </div>
+            <div class="algemeen-topics">
+                <div class="topics">
+                    <i class="fa-solid fa-check check" style="color: #00ff04;"></i>
+                    <p class="topics-text">Fitness</p>
+                </div>
+                <div class="topics">
+                    <i class="fa-solid fa-check check" style="color: #00ff04;"></i>
+                    <p class="topics-text">Sauna</p>
+                </div>
+               
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="footer-container">
             <div class="footer-socials">

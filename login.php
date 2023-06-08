@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/login1.css">
 	
 </head>
-<body>
+<body >
 	<div  class="col-md-6 well">
 
 		<div class="col-md-2"></div>
@@ -45,5 +45,6 @@
 			</form>
 		</div>
 	</div>
+
 </body>
 </html>

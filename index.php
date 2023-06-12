@@ -1,5 +1,14 @@
 <?php
+$db_username = 'root';
+$db_password = '';
 
+try {
+    $conn = new PDO('mysql:host=localhost;dbname=db_login', $db_username, $db_password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Verbinding succesvol!";
+} catch (PDOException $e) {
+    die("Verbinding mislukt: " . $e->getMessage());
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +36,7 @@
             <div class="navigatie-first">
                 <a href="bestemming.php">+31 6 234 567 89</a>
                 <span class="scheidingslijn"></span>
-                <a href="test.html">contact@domain.com</a>
+                <a href="Contact.php">contact@domain.com</a>
             </div>
             <div class="navigatie-second">
                 <a href="login.php">Login</a>
@@ -151,12 +160,18 @@
             <div class="locatie-container radio-btns">
                 <div class="destination-card radio-btns__btn">
                     <img class="bestemmingen-imgs" src="img/Frankijk-parijs-1.2.jpg" alt="" width="200" height="181">
+                    <?php
+                        $query = "SELECT titel FROM vakanties LIMIT 1";
+                        $result = $conn->query($query);
+                        $row = $result->fetch(PDO::FETCH_ASSOC);
+                        echo "<a href='bestemming.php?id='>".$row['titel']."</span></a>";
+                        ?>
                     <a href="bestemming.php"><h5>Parijs</h5></a>
                    <a href="bestemming.php"><h6>Frankrijk</h6></a>
                 </div>
                 <div class="destination-card radio-btns__btn">
                     <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                    <a href="bestemming.php"><h5>Big sur</h5></a>
+                    <a href="bestemming.php"><h5>italie</h5></a>
                    <a href="bestemming.php"><h6>Califonia USA</h6></a>
                 </div>
                 <div class="destination-card radio-btns__btn">

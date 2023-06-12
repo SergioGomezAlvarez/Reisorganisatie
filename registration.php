@@ -35,7 +35,6 @@
 			</div>
 			<a class="Registration-text" href="login.php">Login</a>
 			<a class="Registration-text" href="index.php">/Terug naar het website</a>
-			
 		</form>
 
 		

@@ -1,6 +1,16 @@
 <?php
+$db_username = 'root';
+$db_password = '';
 
+try {
+    $conn = new PDO('mysql:host=localhost;dbname=db_login', $db_username, $db_password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Verbinding succesvol!";
+} catch (PDOException $e) {
+    die("Verbinding mislukt: " . $e->getMessage());
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +31,6 @@
 </head>
 
 </head>
-SELECT * FROM `bestemmingen` WHERE `bestemming` = 'ID1'
 
 <body>
     <header class="header ">
@@ -59,40 +68,45 @@ SELECT * FROM `bestemmingen` WHERE `bestemming` = 'ID1'
             <div class="naam-van-bestemming">
                 <div class="Terug-en-naam">
                     <div class="terug-div">
-                        <a class="terug-button" href="index.php"><i class="fas fa-arrow-left">Terug</i></a>
+                        <a class="terug-button" href="index.php"><i class="fas fa-arrow-left"></i>Terug</a>
                     </div>
                     <h1 class="top-text1 title-bestemming">
-                        Jou vakantie naar <span class="bestemming-naam">Perijs</span>
+                        Jouw vakantie naar
+                        <?php
+                        $query = "SELECT titel FROM vakanties LIMIT 1";
+                        $result = $conn->query($query);
+                        $row = $result->fetch(PDO::FETCH_ASSOC);
+                        echo "<span class='bestemming-naam'>" . $row['titel'] . "</span>";
+                        ?>
                     </h1>
                     <div style="width: 242px;"></div>
                 </div>
-            </div>
-            <div class="bestemming-img-big-div">
-                <div class="bestemming radio-btns">
-                    <div class="links-div-img ">
-                        <div class="bovenste-img "></div>
-                        <div class="onderste-img"></div>
-                    </div>
-                    <div class="rechts-div-img">
-                        <div class="omschrihhjving-bestemming radio-btns__btn">
-                            <h1 class="omschrihhjving-titl">Parijs, de "Stad van de Liefde" en de thuisbasis van
-                                iconische bezienswaardigheden zoals de Eiffeltoren, het Louvre en de Notre-Dame. Het
-                                biedt ook heerlijk eten, prachtige architectuur en een romantische sfeer.</h1>
-                            <h2 class="omschrihhjving-titl">Hotel suggestie: Hotel Le Meurice, een luxueus
-                                5-sterrenhotel gelegen in het hart van Parijs, met elegante kamers, een
-                                Michelin-sterrenrestaurant en een fantastisch uitzicht op de stad.</h2>
-                            <h3 class="omschrihhjving-titl">Vlucht suggestie: KLM, een van de beste
-                                luchtvaartmaatschappijen ter wereld, met een uitstekende service en een breed scala aan
-                                bestemmingen.</h3>
+                <div class="bestemming-img-big-div">
+                    <div class="bestemming radio-btns">
+                        <div class="links-div-img ">
+                            <div class="bovenste-img "></div>
+                            <div class="onderste-img"></div>
                         </div>
-                        <div class="rechts-img-onder">
-                            <div class="links-img"></div>
-                            <div class="rechts-img"></div>
+                        <div class="rechts-div-img">
+                            <div class="omschrihhjving-bestemming radio-btns__btn">
+                                <h1 class="omschrihhjving-titl">
+                                    <?php
+                                    $query = "SELECT korte_omschrijving FROM vakanties LIMIT 1";
+                                    $result = $conn->query($query);
+                                    $row = $result->fetch(PDO::FETCH_ASSOC);
+                                    echo $row['korte_omschrijving'];
+                                    ?>
+                                </h1>
+                            </div>
+
+                            <div class="rechts-img-onder">
+                                <div class="links-img"></div>
+                                <div class="rechts-img"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </header>
     <main>
         <div class="boeken-vakantie">
@@ -189,36 +203,46 @@ SELECT * FROM `bestemmingen` WHERE `bestemming` = 'ID1'
     <div class="hotel-info-container">
         <div class="hotel-info-bg">
             <p class="hotel-info">
-                Algemene beschrijving<br></br>Hotel Le Meurice is een elegant vijfsterrenhotel gelegen in het hart van
-                Parijs. Het hotel biedt een luxueuze en verfijnde sfeer, met prachtig ingerichte kamers en uitstekende
-                faciliteiten. Of je nu een stedentrip maakt of een romantisch uitje plant, Hotel Le Meurice biedt de
-                perfecte setting voor een onvergetelijk verblijf.<br></br>Ligging & Omgeving<br></br>Gelegen aan de
-                prestigieuze Rue de Rivoli, tegenover de prachtige Tuileries-tuinen en op steenworp afstand van het
-                Louvre, geniet Hotel Le Meurice van een ongeëvenaarde locatie. Vanuit het hotel heb je gemakkelijk
-                toegang tot de belangrijkste bezienswaardigheden van Parijs, waaronder de Champs-Élysées, de Eiffeltoren
-                en de Notre-Dame. Daarnaast bevinden zich in de nabije omgeving exclusieve boetieks, restaurants en
-                theaters, waardoor je kunt genieten van het beste wat Parijs te bieden
-                heeft.<br></br>Kamers<br></br>Hotel Le Meurice beschikt over stijlvolle en ruime kamers, prachtig
-                ingericht met aandacht voor detail. Elke kamer is voorzien van moderne voorzieningen, zoals een
-                flatscreen-tv, minibar, airconditioning, verwarming, telefoon, gratis WiFi en een luxueuze badkamer met
-                badjassen, slippers en hoogwaardige toiletartikelen. Vanuit de kamers heb je vaak een adembenemend
-                uitzicht op de stad Parijs.<br></br>Faciliteiten<br></br>Hotel Le Meurice biedt een scala aan
-                uitstekende faciliteiten om je verblijf zo comfortabel mogelijk te maken. Begin je dag met een heerlijk
-                ontbijt in het elegante restaurant van het hotel, waar je kunt genieten van een uitgebreid buffet. Voor
-                een culinaire ervaring van wereldklasse kun je terecht in het met drie Michelin-sterren bekroonde
-                restaurant van het hotel, waar gerechten worden bereid door een bekroonde chef-kok.<br></br>Na een dag
-                verkennen van de stad kun je ontspannen in de prachtige spa van het hotel, compleet met een
-                binnenzwembad, sauna, stoombad en een scala aan verkwikkende behandelingen. Hotel Le Meurice beschikt
-                ook over goed uitgeruste fitnessfaciliteiten voor degenen die hun trainingsroutine willen behouden
-                tijdens hun verblijf.<br></br>Daarnaast biedt het hotel een conciërgedienst, limousineservice, gratis
-                WiFi in alle ruimtes, een elegante loungebar waar je kunt genieten van verfrissende drankjes, en
-                vergader- en evenementenfaciliteiten voor zakelijke reizigers.<br></br>Vervoer naar Hotel Le Meurice is
-                handig met de nabijgelegen metrostations en het hotel kan ook vervoer van en naar de luchthaven regelen
-                voor gasten die dat wensen.<br></br>Kom je met de auto naar Hotel Le Meurice? Het hotel biedt
-                parkeerservice voor gasten, zodat je zorgeloos kunt genieten van je verblijf in Parijs.<br></br>Hotel Le
-                Meurice verwelkomt je met zijn elegante charme, uitstekende service en ongeëvenaarde locatie, en belooft
-                een onvergetelijk verblijf in de betoverende stad Parijs.
-            </p>
+                Algemene beschrijving
+                <br>
+                <br>
+                <?php
+                $query = "SELECT algemene_beschrijving FROM vakanties LIMIT 1";
+                $result = $conn->query($query);
+                $row = $result->fetch(PDO::FETCH_ASSOC);
+                echo nl2br($row['algemene_beschrijving']);
+                ?>
+                <br>
+                </br class="titel-info">Ligging & Omgeving<br>
+                <br>
+                <?php
+                $query = "SELECT ligging_omgeving FROM vakanties LIMIT 1";
+                $result = $conn->query($query);
+                $row = $result->fetch(PDO::FETCH_ASSOC);
+                echo nl2br($row['ligging_omgeving']);
+                ?>
+                <br>
+                </br>
+                Kamers<br>
+                <br>
+
+                faciliteiten
+
+                <?php
+                $query = "SELECT kamers FROM vakanties LIMIT 1";
+                $result = $conn->query($query);
+                $row = $result->fetch(PDO::FETCH_ASSOC);
+                echo nl2br($row['kamers']);
+                ?>
+                <br>
+                </br>Faciliteiten<br>
+                <br>
+                <?php
+                $query = "SELECT faciliteiten FROM vakanties LIMIT 1";
+                $result = $conn->query($query);
+                $row = $result->fetch(PDO::FETCH_ASSOC);
+                echo nl2br($row['faciliteiten']);
+                ?>
         </div>
     </div>
     <div class="faciliteiten-titel-bg">
@@ -231,7 +255,6 @@ SELECT * FROM `bestemmingen` WHERE `bestemming` = 'ID1'
                 <h1 class="algemeen-text">Algemeen</h1>
             </div>
             <div class="line">
-
             </div>
             <div class="algemeen-topics">
                 <div class="topics">
@@ -260,15 +283,12 @@ SELECT * FROM `bestemmingen` WHERE `bestemming` = 'ID1'
                 </div>
             </div>
         </div>
-
-
         <div class="faciliteiten-activiteiten">
             <div class="activiteiten-titel">
                 <i class="fa-solid fa-baseball baseball" style="color: #8f8f8f;"></i>
                 <h1 class="algemeen-text">Activiteiten</h1>
             </div>
             <div class="line">
-
             </div>
             <div class="algemeen-topics">
                 <div class="topics">

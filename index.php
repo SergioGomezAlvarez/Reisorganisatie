@@ -213,6 +213,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="about-us-container">
                 <div class="about-us-text">
                     <h1 class="about-us-title">
@@ -231,7 +232,6 @@
             </div>
         </div>
         </div>
-
     </main>
     <footer>
         <div class="footer-container">

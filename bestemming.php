@@ -202,6 +202,9 @@ try {
             </div>
         </div>
         </div>
+        <div class="terug-div">
+            <a class="algemene-voorwaarden-button" href="algemene_voorwaarden.php">Algemene Voorwaarden</a>
+        </div>
     </main>
     <div class="hotel-titel-bg">
         <h1 class="hotel-titel">Hotel Le Meurice</h1>

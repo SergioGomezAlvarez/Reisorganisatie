@@ -142,7 +142,7 @@ try {
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="zoek_knop">
                     <button type="button" class="zoek_knop_button">Zoek</button>
@@ -158,37 +158,26 @@ try {
                 </div>
             </section>
             <div class="locatie-container radio-btns">
-                <div class="destination-card radio-btns__btn">
+                <?php
+
+                    $query = "SELECT id, titel,img1,kortetitel FROM vakanties";
+                    $result = $conn->query($query);
+
+                    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                        $id = $row['id'];
+                        $titel = $row['titel'];
+                        $img1 = $row['img1'];
             
-                    <img class="bestemmingen-imgs" src="img/Frankijk-parijs-1.2.jpg" alt="" width="200" height="181">
-                    <a href="bestemming.php"><h5>Parijs</h5></a>
-                   <a href="bestemming.php"><h6>Frankrijk</h6></a>
-                </div>
-                <div class="destination-card radio-btns__btn">
-                    <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                    <a href="bestemming.php"><h5>italie</h5></a>
-                   <a href="bestemming.php"><h6>Califonia USA</h6></a>
-                </div>
-                <div class="destination-card radio-btns__btn">
-                    <img class="bestemmingen-imgs"  src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                   <a href="bestemming.php"><h5>spanje</h5></a>
-                   <a href="bestemming.php"><h6>Califonia USA</h6></a>
-                </div>
-                <div class="destination-card radio-btns__btn">
-                    <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                    <a href="bestemming.php"><h5>Kroatië</h5></a>
-                   <a href="bestemming.php"><h6>Califonia USA</h6></a>
-                </div>
-                <div class="destination-card radio-btns__btn">
-                    <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                    <a href="bestemming.php"><h5>Griekenland</h5></a>
-                   <a href="bestemming.php"><h6>Califonia USA</h6></a>
-                </div>
-                <div class="destination-card radio-btns__btn">
-                    <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                    <a href="bestemming.php"><h5>Tsjechië</h5></a>
-                   <a href="bestemming.php"><h6>Califonia USA</h6></a>
-                </div>
+                        echo '<div class="destination-card radio-btns__btn">';
+                        echo '<img class="bestemmingen-imgs" src="img/' . $row['img1'] . '" alt="" width="200" height="181">';
+                        echo '<a href="bestemming.php?bestemming=' . $row['id'] . '">' . $row['titel'] . '</a>';
+                        echo '<a href="bestemming.php?bestemming=' . $row['id'] . ' ">';
+                        echo '<h6>'.$row['kortetitel'].'</h6>';
+                        echo '</a>';
+                        echo '</div>';
+                    }
+                    ?>
+         
             </div>
             <section class="bestemmingen">
                 <div class="bestemmingen-container">
@@ -223,7 +212,7 @@ try {
                     </div>
                 </div>
             </div>
-            
+
             <div class="about-us-container">
                 <div class="about-us-text">
                     <h1 class="about-us-title">
@@ -291,7 +280,8 @@ try {
                         <p>Uw Email </p>
                     </div>
                     <a class="email-send-button">
-                        <i class="fa-solid fa-arrow-right" style="color: #ffffff;"><a href="mailto:gebruikersnaam@emailadres.nl?subject=Tekst">Stuur een e-mail</a></i>
+                        <i class="fa-solid fa-arrow-right" style="color: #ffffff;"><a
+                                href="mailto:gebruikersnaam@emailadres.nl?subject=Tekst">Stuur een e-mail</a></i>
                     </a>
                 </div>
 

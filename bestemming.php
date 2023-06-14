@@ -73,11 +73,17 @@ try {
                     <h1 class="top-text1 title-bestemming">
                         Jouw vakantie naar
                         <?php
-                        $query = "SELECT titel FROM vakanties LIMIT 1";
-                        $result = $conn->query($query);
-                        $row = $result->fetch(PDO::FETCH_ASSOC);
-                        echo "<span class='bestemming-naam'>" . $row['titel'] . "</span>";
+                        if (isset($_GET['bestemming'])) {
+                            $query = "SELECT titel FROM `vakanties` WHERE id =" . $_GET['bestemming'];
+                            $result = $conn->query($query);
+                            $row = $result->fetch(PDO::FETCH_ASSOC);
+                            echo "<span class='bestemming-naam'>" . $row['titel'] . "</span>";
+                        }
                         ?>
+
+                    </h1>
+
+
                     </h1>
                     <div style="width: 242px;"></div>
                 </div>
@@ -299,7 +305,7 @@ try {
                     <i class="fa-solid fa-check check" style="color: #00ff04;"></i>
                     <p class="topics-text">Sauna</p>
                 </div>
-               
+
             </div>
         </div>
     </div>

@@ -90,17 +90,35 @@ try {
                 <div class="bestemming-img-big-div">
                     <div class="bestemming radio-btns">
                         <div class="links-div-img ">
-                            <div class="bovenste-img "></div>
-                            <div class="onderste-img"></div>
+                            <div class="bovenste-img">
+                                <?php if (isset($_GET['bestemming'])) {
+                                    $query = "SELECT img2 FROM `vakanties` WHERE id =" . $_GET['bestemming'];
+                                    $result = $conn->query($query);
+                                    $row = $result->fetch(PDO::FETCH_ASSOC);
+                                    echo "<img class='bovenste-img  '  src='" . $row['img2'] . "'>";
+                                }
+                                ?>
+                            </div>
+                            <div class="onderste-img">
+                                <?php if (isset($_GET['bestemming'])) {
+                                    $query = "SELECT img3 FROM `vakanties` WHERE id =" . $_GET['bestemming'];
+                                    $result = $conn->query($query);
+                                    $row = $result->fetch(PDO::FETCH_ASSOC);
+                                    echo "<img class='onderste-img'  src='" . $row['img3'] . "'>";
+                                }
+                                ?>
+                            </div>
                         </div>
                         <div class="rechts-div-img">
                             <div class="omschrihhjving-bestemming radio-btns__btn">
                                 <h1 class="omschrihhjving-titl">
                                     <?php
-                                    $query = "SELECT korte_omschrijving FROM vakanties LIMIT 1";
-                                    $result = $conn->query($query);
-                                    $row = $result->fetch(PDO::FETCH_ASSOC);
-                                    echo $row['korte_omschrijving'];
+                                    if (isset($_GET['bestemming'])) {
+                                        $query = "SELECT korte_omschrijving FROM `vakanties` WHERE id =" . $_GET['bestemming'];
+                                        $result = $conn->query($query);
+                                        $row = $result->fetch(PDO::FETCH_ASSOC);
+                                        echo $row['korte_omschrijving'];
+                                    }
                                     ?>
                                 </h1>
                             </div>
@@ -115,96 +133,69 @@ try {
             </div>
     </header>
     <main>
-        <div class="boeken-vakantie">
-            <div class="zoek-reis-big-div boeken-big-div">
-                <section class="boeken-titl">
-                    <p>Boeken voor deze vakantie</p>
-                </section>
-                <div class="zoek-reis-div">
-                    <div class="reisdatum">
-                        <p>Reisdatum</p>
-                        <input name="reisdatum" type="date" value="2023-05-03">
-                    </div>
-                    <div class="retourdatum">
-                        <p>Retourdatum</p>
-                        <input name="retourdatum" type="date" value="2023-05-03">
-                    </div>
-                    <div class="passagier">
-                        <p>Passagier</p>
-                        <button onclick="myFunction()"> +0 Passagier</i></button>
-                        <div id="passagier-keizen" style="display:none">
-                            <div class="passagiers-types">
-                                <div class="passagiers-type">
-                                    <div class="Volwassenen">
-                                        <p>Volwassenen</p>
-                                    </div>
-                                    <div class="button-set">
-                                        <button type="button" id="minus2">
-                                            <i class="fa-solid fa-minus"></i>
-                                        </button>
-                                        <input class="passagiers-set" type="number" value="0" id="input2" />
-                                        <button type="button" id="plus2">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="passagiers-type">
-                                    <div class="Volwassenen">
-                                        <p>kinderen</p>
-                                    </div>
-                                    <div class="button-set">
-                                        <button type="button" id="minus3">
-                                            <i class="fa-solid fa-minus"></i>
-                                        </button>
-                                        <input class="passagiers-set" type="number" value="0" id="input3" />
-                                        <button type="button" id="plus3">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="passagiers-type">
-                                    <div class="Volwassenen">
-                                        <p>Zuigeling</p>
-                                    </div>
-                                    <div class="button-set">
-                                        <button type="button" id="minus4">
-                                            <i class="fa-solid fa-minus"></i>
-                                        </button>
-                                        <input class="passagiers-set" type="number" value="0" id="input4" />
-                                        <button type="button" id="plus4">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="zoek_knop">
-                        <button type="button" class="zoek_knop_button">Zoek</button>
-                    </div>
-                </div>
-            </div>
-            <div class="kosten-vakantie-big-div">
-                <div class="kosten-vakanti">
-                    <?php
 
-                    $begin = new DateTime('2010-05-01');
-                    $end = new DateTime('2010-05-10');
+        <div class="vakanties">
 
-                    $interval = DateInterval::createFromDateString('1 day');
-                    $period = new DatePeriod($begin, $interval, $end);
+            <h2>Beschikbare vakanties</h2>
+            <div class="vakanties">
+                <?php
+                $db_username = 'root';
+                $db_password = '';
+                $conn = new PDO('mysql:host=localhost;dbname=db_login', $db_username, $db_password);
+                if (!$conn) {
+                    die("Fatal Error: Connection Failed!");
+                }
 
-                    foreach ($period as $dt) {
-                        echo "<div class='block'>&euro; 1000,- " . $dt->format("l d-m-Y \n") . "</div>";
+                $sql = "SELECT * FROM vakanties where id = " . $_GET['bestemming'] . "";
+                $result = $conn->query($sql);
+
+                // Beschikbaarheidsinformatie weergeven
+                if ($result->rowCount() > 0) {
+                    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                        $vakantieId = $row["id"];
+                        $beginDatum = $row["begin_datum"];
+                        $eindDatum = $row["eind_datum"];
+
+
+                        $beschikbaarheid = "Beschikbaar";
+
+
+                        echo "<div class='vakantie'>";
+
+                        echo "<p>Beschikbaarheid: $beginDatum - $eindDatum ($beschikbaarheid)</p>";
+                        echo "<button class='boek-btn'>Boek nu</button>";
+                        echo "</div>";
                     }
-                    ?>
-                </div>
+                } else {
+                    echo "Geen vakanties beschikbaar.";
+                }
+                ?>
+            </div>
+            <div class="boekingsformulier-div">
+            <h2>Boekingsformulier</h2>
+                <form class="boekingsformulier">
+                    <label for="naam">Naam:</label>
+                    <input type="text" id="naam" name="naam" required>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="vakantie">Vakantiebestemming:</label>
+                    <select id="vakantie" name="vakantie" required>
+                        <option value="">Selecteer een vakantie</option>
+                        <option value="bestemming1">Vakantiebestemming 1</option>
+                        <option value="bestemming2">Vakantiebestemming 2</option>
+                        <!-- Voeg hier meer vakantie-opties toe -->
+                    </select>
+                    <button type="submit">Boek</button>
+                </form>
             </div>
         </div>
+
+
+
         </div>
     </main>
     <div class="hotel-titel-bg">
-        <h1 class="hotel-titel">Hotel Le Meurice</h1>
+        <h1 class="hotel-titel">Hotel</h1>
     </div>
     <div class="hotel-info-container">
         <div class="hotel-info-bg">
@@ -213,19 +204,24 @@ try {
                 <br>
                 <br>
                 <?php
-                $query = "SELECT algemene_beschrijving FROM vakanties LIMIT 1";
-                $result = $conn->query($query);
-                $row = $result->fetch(PDO::FETCH_ASSOC);
-                echo nl2br($row['algemene_beschrijving']);
+                if (isset($_GET['bestemming'])) {
+                    $query = "SELECT algemene_beschrijving FROM `vakanties` WHERE id =" . $_GET['bestemming'];
+                    $result = $conn->query($query);
+                    $row = $result->fetch(PDO::FETCH_ASSOC);
+                    echo nl2br($row['algemene_beschrijving']);
+                }
+
                 ?>
                 <br>
                 </br class="titel-info">Ligging & Omgeving<br>
                 <br>
                 <?php
-                $query = "SELECT ligging_omgeving FROM vakanties LIMIT 1";
-                $result = $conn->query($query);
-                $row = $result->fetch(PDO::FETCH_ASSOC);
-                echo nl2br($row['ligging_omgeving']);
+                if (isset($_GET['bestemming'])) {
+                    $query = "SELECT ligging_omgeving FROM `vakanties` WHERE id =" . $_GET['bestemming'];
+                    $result = $conn->query($query);
+                    $row = $result->fetch(PDO::FETCH_ASSOC);
+                    echo nl2br($row['ligging_omgeving']);
+                }
                 ?>
                 <br>
                 </br>
@@ -235,19 +231,24 @@ try {
                 faciliteiten
 
                 <?php
-                $query = "SELECT kamers FROM vakanties LIMIT 1";
-                $result = $conn->query($query);
-                $row = $result->fetch(PDO::FETCH_ASSOC);
-                echo nl2br($row['kamers']);
+                if (isset($_GET['bestemming'])) {
+                    $query = "SELECT kamers FROM `vakanties` WHERE id =" . $_GET['bestemming'];
+                    $result = $conn->query($query);
+                    $row = $result->fetch(PDO::FETCH_ASSOC);
+                    echo nl2br($row['kamers']);
+                }
+
                 ?>
                 <br>
                 </br>Faciliteiten<br>
                 <br>
                 <?php
-                $query = "SELECT faciliteiten FROM vakanties LIMIT 1";
-                $result = $conn->query($query);
-                $row = $result->fetch(PDO::FETCH_ASSOC);
-                echo nl2br($row['faciliteiten']);
+                if (isset($_GET['bestemming'])) {
+                    $query = "SELECT faciliteiten FROM `vakanties` WHERE id =" . $_GET['bestemming'];
+                    $result = $conn->query($query);
+                    $row = $result->fetch(PDO::FETCH_ASSOC);
+                    echo nl2br($row['faciliteiten']);
+                }
                 ?>
         </div>
     </div>

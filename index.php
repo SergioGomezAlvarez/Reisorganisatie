@@ -1,4 +1,5 @@
 <?php
+session_start();
 $db_username = 'root';
 $db_password = '';
 
@@ -39,6 +40,10 @@ try {
                 <a href="Contact.php">contact@domain.com</a>
             </div>
             <div class="navigatie-second">
+                <?php if (isset($_SESSION['login'])) { ?>
+                    <a href="logout.php">Logout</a>
+                    <span class="scheidingslijn"></span>
+                <?php } ?>
                 <a href="login.php">Login</a>
                 <span class="scheidingslijn"></span>
                 <a href="#">Sign Up</a>
@@ -143,6 +148,7 @@ try {
                         </div>
                     </div>
 
+
                 </div>
                 <div class="zoek_knop">
                     <button type="button" class="zoek_knop_button">Zoek</button>
@@ -213,6 +219,7 @@ try {
                 </div>
             </div>
 
+
             <div class="about-us-container">
                 <div class="about-us-text">
                     <h1 class="about-us-title">
@@ -280,6 +287,8 @@ try {
                         <p>Uw Email </p>
                     </div>
                     <a class="email-send-button">
+                        <i class="fa-solid fa-arrow-right" style="color: #ffffff;"><a
+                                href="mailto:gebruikersnaam@emailadres.nl?subject=Tekst">Stuur een e-mail</a></i>
                         <i class="fa-solid fa-arrow-right" style="color: #ffffff;"><a
                                 href="mailto:gebruikersnaam@emailadres.nl?subject=Tekst">Stuur een e-mail</a></i>
                     </a>

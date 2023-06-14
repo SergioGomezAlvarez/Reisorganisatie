@@ -347,6 +347,28 @@
     padding-left: 15px;
 }
 
+.algemene-voorwaarden-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10.5rem;
+    height: 2rem;
+    margin: 0.5rem;
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid black;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 1rem 1rem 1rem 1rem;
+}
+
+.algemene-voorwaarden-button:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
   h1 {
     text-align: center;
   }

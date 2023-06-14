@@ -39,6 +39,10 @@ try {
                 <a href="Contact.php">contact@domain.com</a>
             </div>
             <div class="navigatie-second">
+                <?php if (isset($_SESSION['login'])) { ?>
+                    <a href="logout.php">Logout</a>
+                    <span class="scheidingslijn"></span>
+                <?php } ?>
                 <a href="login.php">Login</a>
                 <span class="scheidingslijn"></span>
                 <a href="#">Sign Up</a>
@@ -142,7 +146,7 @@ try {
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="zoek_knop">
                     <button type="button" class="zoek_knop_button">Zoek</button>
@@ -159,35 +163,59 @@ try {
             </section>
             <div class="locatie-container radio-btns">
                 <div class="destination-card radio-btns__btn">
-            
+
                     <img class="bestemmingen-imgs" src="img/Frankijk-parijs-1.2.jpg" alt="" width="200" height="181">
-                    <a href="bestemming.php"><h5>Parijs</h5></a>
-                   <a href="bestemming.php"><h6>Frankrijk</h6></a>
+                    <a href="bestemming.php">
+                        <h5>Parijs</h5>
+                    </a>
+                    <a href="bestemming.php">
+                        <h6>Frankrijk</h6>
+                    </a>
                 </div>
                 <div class="destination-card radio-btns__btn">
                     <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                    <a href="bestemming.php"><h5>italie</h5></a>
-                   <a href="bestemming.php"><h6>Califonia USA</h6></a>
-                </div>
-                <div class="destination-card radio-btns__btn">
-                    <img class="bestemmingen-imgs"  src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                   <a href="bestemming.php"><h5>spanje</h5></a>
-                   <a href="bestemming.php"><h6>Califonia USA</h6></a>
-                </div>
-                <div class="destination-card radio-btns__btn">
-                    <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                    <a href="bestemming.php"><h5>Kroatië</h5></a>
-                   <a href="bestemming.php"><h6>Califonia USA</h6></a>
+                    <a href="bestemming.php">
+                        <h5>italie</h5>
+                    </a>
+                    <a href="bestemming.php">
+                        <h6>Califonia USA</h6>
+                    </a>
                 </div>
                 <div class="destination-card radio-btns__btn">
                     <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                    <a href="bestemming.php"><h5>Griekenland</h5></a>
-                   <a href="bestemming.php"><h6>Califonia USA</h6></a>
+                    <a href="bestemming.php">
+                        <h5>spanje</h5>
+                    </a>
+                    <a href="bestemming.php">
+                        <h6>Califonia USA</h6>
+                    </a>
                 </div>
                 <div class="destination-card radio-btns__btn">
                     <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
-                    <a href="bestemming.php"><h5>Tsjechië</h5></a>
-                   <a href="bestemming.php"><h6>Califonia USA</h6></a>
+                    <a href="bestemming.php">
+                        <h5>Kroatië</h5>
+                    </a>
+                    <a href="bestemming.php">
+                        <h6>Califonia USA</h6>
+                    </a>
+                </div>
+                <div class="destination-card radio-btns__btn">
+                    <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
+                    <a href="bestemming.php">
+                        <h5>Griekenland</h5>
+                    </a>
+                    <a href="bestemming.php">
+                        <h6>Califonia USA</h6>
+                    </a>
+                </div>
+                <div class="destination-card radio-btns__btn">
+                    <img class="bestemmingen-imgs" src="img/bestemmingen-1.avif" alt="" width="200" height="181">
+                    <a href="bestemming.php">
+                        <h5>Tsjechië</h5>
+                    </a>
+                    <a href="bestemming.php">
+                        <h6>Califonia USA</h6>
+                    </a>
                 </div>
             </div>
             <section class="bestemmingen">
@@ -223,7 +251,7 @@ try {
                     </div>
                 </div>
             </div>
-            
+
             <div class="about-us-container">
                 <div class="about-us-text">
                     <h1 class="about-us-title">
@@ -291,7 +319,8 @@ try {
                         <p>Uw Email </p>
                     </div>
                     <a class="email-send-button">
-                        <i class="fa-solid fa-arrow-right" style="color: #ffffff;"><a href="mailto:gebruikersnaam@emailadres.nl?subject=Tekst">Stuur een e-mail</a></i>
+                        <i class="fa-solid fa-arrow-right" style="color: #ffffff;"><a
+                                href="mailto:gebruikersnaam@emailadres.nl?subject=Tekst">Stuur een e-mail</a></i>
                     </a>
                 </div>
 

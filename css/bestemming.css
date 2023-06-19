@@ -94,25 +94,16 @@
 
 }
 
-.bovenste-img {
-    width: 100%;
-    height: 50%;
-    background-image: url(../img/Frankijk-parijs-1.2.jpg);
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+.bovenste-img  {
+    width: 24rem;
+    height: 13.5rem;
+    
 }
 
 .onderste-img {
-    width: 100%;
-    height: 50%;
-    background-image: url(../img/frankrijk-paris2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+ width: 24rem;
+    height: 13.5rem;
+    
 }
 
 .omschrihhjving-bestemming {
@@ -140,13 +131,13 @@
 }
 
 .rechts-img {
-    width: 50%;
-    height: 100%;
-    background-image: url(../img/LeJulesVerne2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+        width: 50%;
+        height: 100%;
+        background-image: url(../img/LeJulesVerne2.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
 }
 
 .omschrihhjving-titl {
@@ -379,3 +370,72 @@
     transform: scale(1.1);
     transition: 0.5s;
 }
+
+  h1 {
+    text-align: center;
+  }
+  
+  h2 {
+    margin-top: 30px;
+  }
+  .vakanties{
+    margin: 3px;
+  }
+  .vakantie {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+
+  }
+  
+  .boek-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .boekingsformulier {
+    max-width: 400px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  select {
+    width: 377px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  button[type="submit"] {
+    background-color: #2559ca;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .boekingsformulier-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  

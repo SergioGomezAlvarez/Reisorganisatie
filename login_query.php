@@ -14,9 +14,14 @@ if (isset($_POST['login']) && $_POST['username'] != "" || $_POST['password'] != 
 	$row = $query->rowCount();
 	$fetch = $query->fetch();
 
+
 	if ($row > 0) {
-		$_SESSION['login'] = true; // Sessievariabele instellen bij succesvolle login
+		$_SESSION['login'] = true;
+		$_SESSION['username']=$_POST['username'] ;// Sessievariabele instellen bij succesvolle login
+		
+		echo "Login successful";
 		header("Location: index.php");
+
 		exit();
 	} else {
 		echo "

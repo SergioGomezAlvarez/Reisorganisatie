@@ -31,7 +31,7 @@
 
         <div class="contact-form">
             <h1>Contactformulier</h1>
-            <form action="submit.php" method="POST">
+            <form action="Contactverwerking.php" method="POST">
                 <label for="name">Naam:</label>
                 <input type="text" id="name" name="name" required>
 

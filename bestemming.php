@@ -5,10 +5,19 @@ $db_password = '';
 try {
     $conn = new PDO('mysql:host=localhost;dbname=db_login', $db_username, $db_password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Verbinding succesvol!";
+
 } catch (PDOException $e) {
     die("Verbinding mislukt: " . $e->getMessage());
 }
+
+session_start();
+
+// Controleer of de gebruiker is ingelogd
+if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
+    header("Location: login.php"); // Stuur de gebruiker naar de inlogpagina als deze niet is ingelogd
+    exit();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -41,6 +50,7 @@ try {
                 <a href="bestemmijng.php">contact@domain.com</a>
             </div>
             <div class="navigatie-second">
+                <?php include_once 'header.php'; ?>
                 <a href="login.php">Login</a>
                 <span class="scheidingslijn"></span>
                 <a href="#">Sign Up</a>
@@ -134,61 +144,46 @@ try {
     </header>
     <main>
 
+
         <div class="vakanties">
-
             <h2>Beschikbare vakanties</h2>
-            <div class="vakanties">
-                <?php
-                $db_username = 'root';
-                $db_password = '';
-                $conn = new PDO('mysql:host=localhost;dbname=db_login', $db_username, $db_password);
-                if (!$conn) {
-                    die("Fatal Error: Connection Failed!");
+            <?php
+            $db_username = 'root';
+            $db_password = '';
+            $conn = new PDO('mysql:host=localhost;dbname=db_login', $db_username, $db_password);
+            if (!$conn) {
+                die("Fatal Error: Connection Failed!");
+            }
+
+            $sql = "SELECT * FROM vakanties WHERE id = " . $_GET['bestemming'] . "";
+            $result = $conn->query($sql);
+
+            // Beschikbaarheidsinformatie weergeven
+            if ($result->rowCount() > 0) {
+                while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                    $vakantieId = $row["id"];
+                    $beginDatum = $row["begin_datum"];
+                    $eindDatum = $row["eind_datum"];
+
+                    $beschikbaarheid = "Beschikbaar";
+
+                    echo "<div class='vakantie'>";
+                    echo "<p>Beschikbaarheid: $beginDatum - $eindDatum ($beschikbaarheid)</p>";
+                    echo "<form action='boekingverwerking.php' method='POST'>";
+                    echo "<input type='hidden' name='vakantie_id' value='$vakantieId'>";
+                    echo "<button type='submit'action='boekingverwerking.php' class='boek-btn'>Boek nu</button>";
+                    echo "</form>";
+                    echo "</div>";
                 }
-
-                $sql = "SELECT * FROM vakanties where id = " . $_GET['bestemming'] . "";
-                $result = $conn->query($sql);
-
-                // Beschikbaarheidsinformatie weergeven
-                if ($result->rowCount() > 0) {
-                    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                        $vakantieId = $row["id"];
-                        $beginDatum = $row["begin_datum"];
-                        $eindDatum = $row["eind_datum"];
-
-
-                        $beschikbaarheid = "Beschikbaar";
-
-
-                        echo "<div class='vakantie'>";
-
-                        echo "<p>Beschikbaarheid: $beginDatum - $eindDatum ($beschikbaarheid)</p>";
-                        echo "<button class='boek-btn'>Boek nu</button>";
-                        echo "</div>";
-                    }
-                } else {
-                    echo "Geen vakanties beschikbaar.";
-                }
-                ?>
-            </div>
-            <div class="boekingsformulier-div">
-            <h2>Boekingsformulier</h2>
-                <form class="boekingsformulier">
-                    <label for="naam">Naam:</label>
-                    <input type="text" id="naam" name="naam" required>
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="vakantie">Vakantiebestemming:</label>
-                    <select id="vakantie" name="vakantie" required>
-                        <option value="">Selecteer een vakantie</option>
-                        <option value="bestemming1">Vakantiebestemming 1</option>
-                        <option value="bestemming2">Vakantiebestemming 2</option>
-                        <!-- Voeg hier meer vakantie-opties toe -->
-                    </select>
-                    <button type="submit">Boek</button>
-                </form>
-            </div>
+            } else {
+                echo "Geen vakanties beschikbaar.";
+            }
+            ?>
         </div>
+
+        <div class="boekingsformulier-div">
+        </div>
+
 
 
 

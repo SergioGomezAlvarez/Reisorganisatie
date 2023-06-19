@@ -6,7 +6,7 @@ $db_password = '';
 try {
     $conn = new PDO('mysql:host=localhost;dbname=db_login', $db_username, $db_password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Verbinding succesvol!";
+
 } catch (PDOException $e) {
     die("Verbinding mislukt: " . $e->getMessage());
 }
@@ -32,25 +32,24 @@ try {
 </head>
 
 <body>
+
+
     <header class="header">
         <nav>
             <div class="navigatie-first">
                 <a href="bestemming.php">+31 6 234 567 89</a>
                 <span class="scheidingslijn"></span>
-                <a href="Contact.php">contact@domain.com</a>
+                <a href="Contact.php">contact ons</a>
             </div>
             <div class="navigatie-second">
-                <?php if (isset($_SESSION['login'])) { ?>
-                    <a href="logout.php">Logout</a>
-                    <span class="scheidingslijn"></span>
-                <?php } ?>
+                <?php include_once 'header.php'; ?>
                 <a href="login.php">Login</a>
                 <span class="scheidingslijn"></span>
                 <a href="#">Sign Up</a>
                 <span class="scheidingslijn"></span>
                 <a href="#">NL</a>
                 <span class="scheidingslijn"></span>
-                <a href="#">Euro</a>
+                <a href="mijnAccount.php">mijn account</a>
             </div>
         </nav>
         <div class="top-info">
@@ -85,11 +84,31 @@ try {
         </div>
         <div class="zoek-reis-big-div">
             <div class="zoek-reis-div">
-                <div class="bestemming">
+                <?php
+                $dsn = 'mysql:dbname=db_login;host=127.0.0.1';
+                $user = 'root';
+                $password = '';
+                $connectie = new PDO($dsn, $user, $password);
+
+
+                if (isset($_POST['destination'])) {
+                    $zoekterm = '%' . $_POST['destination'] . '%';
+                    $stmt = $connectie->prepare("SELECT * FROM vakanties WHERE titel LIKE ? ");
+                    $stmt->execute([$zoekterm]);
+                    $resultSet = $stmt->fetchAll();
+
+                } else {
+                    $resultSet = $connectie->query("SELECT * FROM vakanties")->fetchAll();
+
+
+                }
+
+                ?>
+                <form method="post" class="bestemming">
                     <p>Bestemming</p>
-                    <input type="text" placeholder="Waar wil je naar toe?">
+                    <input type="text" placeholder="destination" name="destination">
                     <span>Waar wil je naar toe?</span>
-                </div>
+                </form>
                 <div class="reisdatum">
                     <p>Reisdatum</p>
                     <input type="date" value="2023-05-03">
@@ -162,28 +181,44 @@ try {
                 <div class="bestemmingen-container">
                     <h2 class="section-title"><a href="" class="section-title">Populaire bestemmingen</a></h2>
                 </div>
+
             </section>
             <div class="locatie-container radio-btns">
+
                 <?php
 
-                    $query = "SELECT id, titel,img1,kortetitel FROM vakanties";
-                    $result = $conn->query($query);
 
-                    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                        $id = $row['id'];
-                        $titel = $row['titel'];
-                        $img1 = $row['img1'];
-            
-                        echo '<div class="destination-card radio-btns__btn">';
-                        echo '<img class="bestemmingen-imgs" src="img/' . $row['img1'] . '" alt="" width="200" height="181">';
-                        echo '<a href="bestemming.php?bestemming=' . $row['id'] . '">' . $row['titel'] . '</a>';
-                        echo '<a href="bestemming.php?bestemming=' . $row['id'] . ' ">';
-                        echo '<h6>'.$row['kortetitel'].'</h6>';
-                        echo '</a>';
-                        echo '</div>';
-                    }
-                    ?>
-         
+                if (isset($_POST['destination'])) {
+                    $zoekterm = '%' . $_POST['destination'] . '%';
+                    $stmt = $connectie->prepare("SELECT * FROM vakanties WHERE titel LIKE ? ");
+                    $stmt->execute([$zoekterm]);
+                    $resultSet = $stmt;
+
+
+                } else {
+                    $resultSet = $connectie->query("SELECT * FROM vakanties")->fetchAll();
+
+
+                }
+
+
+
+                while ($row = $resultSet->fetch(PDO::FETCH_ASSOC)) {
+                    $id = $row['id'];
+                    $titel = $row['titel'];
+                    $img1 = $row['img1'];
+
+                    echo '<div class="destination-card radio-btns__btn">';
+                    echo '<img class="bestemmingen-imgs" src="img/' . $row['img1'] . '" alt="" width="200" height="181">';
+                    echo '<a href="bestemming.php?bestemming=' . $row['id'] . '">' . $row['titel'] . '</a>';
+                    echo '<a href="bestemming.php?bestemming=' . $row['id'] . ' ">';
+                    echo '<h6>' . $row['kortetitel'] . '</h6>';
+                    echo '</a>';
+                    echo '</div>';
+                }
+
+                ?>
+
             </div>
             <section class="bestemmingen">
                 <div class="bestemmingen-container">

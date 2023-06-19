@@ -20,7 +20,9 @@
     width: 6.5rem;
     height: 2rem;
     margin: 0.5rem;
+    gap: 10px;
     background-color: #ffffff;
+    color: black;
     border: none;
     outline: none;
     text-decoration: none;

@@ -63,7 +63,7 @@ try {
                 <?php } else { ?>
                     <!-- Toon de gebruikersnaam of een welkomstbericht -->
                     <span>Welcome,
-                        <?php echo $username; ?>    
+                        <?php echo $username; ?>
                     </span>
                     <!-- Andere navigatie-items voor ingelogde gebruikers -->
                     <span class="scheidingslijn"></span>

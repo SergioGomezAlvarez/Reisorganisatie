@@ -183,14 +183,60 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
 
         <div class="boekingsformulier-div">
         </div>
-
-
-
-
         </div>
         <div class="terug-div">
             <a class="algemene-voorwaarden-button" href="algemene_voorwaarden.php">Algemene Voorwaarden</a>
         </div>
+
+        <div class="review-form">
+            <h3>Voeg een review toe:</h3>
+            <form method="POST" action="review_verwerken.php">
+                <input type="hidden" name="vakantie_id" value="5">
+                <label for="gebruikersnaam">naam:</label>
+                <input type="text" name="gebruikersnaam" id="gebruikersnaam" required>
+                <label for="beoordeling">Beoordeling:</label>
+                <input type="number" name="beoordeling" id="beoordeling" min="1" max="5" required>
+                <label for="opmerking">Opmerking:</label>
+                <textarea name="opmerking" id="opmerking" required></textarea>
+                <button type="submit">Review indienen</button>
+            </form>
+
+            <div class="review-lijst">
+                <h3>Reviews:</h3>
+                <?php
+                // Query om reviews met bijbehorende vakanties op te halen
+                $sql = "SELECT reviews.gebruikersnaam, reviews.beoordeling, reviews.opmerking, vakanties.vakantie FROM reviews INNER JOIN vakanties ON reviews.vakantie_id = vakanties.id ORDER BY reviews.id DESC";
+                $stmt = $conn->prepare($sql);
+                $stmt->execute();
+
+                // Loop door de resultaten en toon elke review met bijbehorende vakantie
+                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                    $gebruikersnaam = $row['gebruikersnaam'];
+                    $beoordeling = $row['beoordeling'];
+                    $opmerking = $row['opmerking'];
+                    $vakantie = $row['vakantie'];
+
+                    // Toon de review met bijbehorende vakantie
+                    echo "<div class='review'>";
+                    echo "<h3>$gebruikersnaam</h3>";
+
+                    // Bereken het aantal sterren op basis van de beoordeling
+                    $sterren = "";
+                    for ($i = 1; $i <= $beoordeling; $i++) {
+                        $sterren .= "&#9733;"; // Voeg een sterrensymbool toe
+                    }
+
+                    echo "<p class='beoordeling'>Beoordeling: <span class='sterren'>$sterren</span></p>";
+                    echo "<p>$opmerking</p>";
+                    echo "<h3>Vakantie naar: $vakantie</h3>";
+                    echo "</div>";
+                }
+
+                ?>
+            </div>
+
+        </div>
+
     </main>
     <div class="hotel-titel-bg">
         <h1 class="hotel-titel">Hotel</h1>

@@ -438,4 +438,37 @@
     align-items: center;
     flex-direction: column;
   }
-  
+  .review-form{
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 6px;
+  }
+  .review-lijst {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.review {
+    margin-bottom: 10px;
+}
+
+.review h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.review p {
+    margin: 0;
+}
+
+.review p:first-child {
+    font-weight: bold;
+}
+.beoordeling {
+    font-size: 16px;
+}
+
+.sterren {
+    color: #FFD700;
+}

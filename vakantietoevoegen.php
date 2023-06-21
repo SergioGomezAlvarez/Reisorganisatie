@@ -25,7 +25,7 @@ if (isset($_POST['vakantie-toevoegen'])) {
             $eind_datum = $_POST['eind_datum'];
 
             $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO `vakanties` (`vakantie`, `korte_omschrijving`, `algemene_beschrijving`, `ligging_omgeving`, `kamers`, `faciliteiten`, `img1`, `img2`, `img3`, `img4`, `img5`, `kortetitel`, `begin_datum` , `eind_datum`) VALUES (?, ?,?,?,?,?,?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO `vakanties` (`vakantie`, `korte_omschrijving`, `algemene_beschrijving`, `ligging_omgeving`, `kamers`, `faciliteiten`, `img1`, `img2`, `img3`, `img4`, `img5`, `kortetitel`, `begin_datum` , `eind_datum`) VALUES (?, ?,?,?,?,?,?,?,?,?,?,?,?,?)";
             $stmt = $dbh->prepare($sql);
             $stmt->execute([$vakantie, $korte_omschrijving, $algemene_beschrijving, $ligging_omgeving, $kamers, $faciliteiten, $img1, $img2, $img3, $img4, $img5, $kortetitel, $begin_datum, $eind_datum]);
 

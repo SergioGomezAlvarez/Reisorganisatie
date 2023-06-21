@@ -192,11 +192,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box vakantie-box">
       
 
             <h2>Vakantie toevoegen</h2>
-            <form method="POST" class="aanmaken" action="vakantietoevoegen.php">
+            <form method="POST" class="aanmaken" action="vakantietoevoegen.php  ">
                 <div class="form-row">
                     <label for="vakantie">Vakantie:</label>
                     <input type="text" id="vakantie" name="vakantie" required><br>
@@ -255,6 +255,79 @@
                 </div>
                 <input type="submit" name="vakantie-toevoegen" value="Vakantie toevoegen">
             </form>
+            <?php
+                 //connectie met database
+                 $dsn = 'mysql:dbname=db_login;host=127.0.0.1';
+                 $user = 'root';
+                 $password = '';
+                 $dbh = new PDO($dsn, $user, $password);
+                  
+                    // Verwerk vakantie formulier
+                    if(isset($_POST['vakantie_verwerk'])){
+                        $vakantie_id = $_POST['vakantie_id'];
+                        $vakantie = $_POST['vakantie'];
+                        $korte_omschrijving = $_POST['korte_omschrijving'];
+                        $algemene_beschrijving = $_POST['algemene_beschrijving'];
+                        $ligging_omgeving = $_POST['ligging_omgeving'];
+                        $kamers = $_POST['kamers'];
+                        $faciliteiten = $_POST['faciliteiten'];
+                        $img1 = $_POST['img1'];
+                        $img2 = $_POST['img2'];
+                        $img3 = $_POST['img3'];
+                        $img4 = $_POST['img4'];
+                        $img5 = $_POST['img5'];
+                        $kortetitel = $_POST['kortetitel'];
+                        $begin_datum = $_POST['begin_datum'];
+                        $eind_datum = $_POST['eind_datum'];
+
+                        //voer query uit om de vakantie te bewerken
+                        $stmt = $dbh->prepare("UPDATE vakanties SET vakantie = :vakantie, korte_omschrijving = :korte_omschrijving, algemene_beschrijving = :algemene_beschrijving, ligging_omgeving = :ligging_omgeving, kamers = :kamers, faciliteiten = :faciliteiten, img1 = :img1, img2 = :img2, img3 = :img3, img4 = :img4, img5 = :img5, kortetitel = :kortetitel, begin_datum = :begin_datum, eind_datum = :eind_datum WHERE id = :id");
+                        $stmt->bindParam(':id', $vakantie_id);
+                        $stmt->bindParam(':vakantie', $vakantie);
+                        $stmt->bindParam(':korte_omschrijving', $korte_omschrijving);
+                        $stmt->bindParam(':algemene_beschrijving', $algemene_beschrijving);
+                        $stmt->bindParam(':ligging_omgeving', $ligging_omgeving);
+                        $stmt->bindParam(':kamers', $kamers);
+                        $stmt->bindParam(':faciliteiten', $faciliteiten);
+                        $stmt->bindParam(':img1', $img1);
+                        $stmt->bindParam(':img2', $img2);
+                        $stmt->bindParam(':img3', $img3);
+                        $stmt->bindParam(':img4', $img4);
+                        $stmt->bindParam(':img5', $img5);
+                        $stmt->bindParam(':kortetitel', $kortetitel);
+                        $stmt->bindParam(':begin_datum', $begin_datum);
+                        $stmt->bindParam(':eind_datum', $eind_datum);
+                        $stmt->execute();
+
+                        header("Location: AdminPanel.php");
+                        exit;
+
+                    }
+
+                    //voer query uit om alle vakanties op te halen
+                    $stmt = $dbh->query("SELECT * FROM vakanties");
+
+                    //Maak een array van alle vakanties voor gebruik in keuzelijst
+                    $vakanties = array();
+                    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                        $vakanties[$row['id']] = $row['vakantie'];
+                    }
+
+                    // Sluit de databaseverbinding
+                    $dbh = null;
+            ?>
+            <h2>Selecteer een vakantie om te bewerken</h2>
+
+            <form method="POST">
+                <label for="vakantie">Vakantie:</label>
+                <select name="vakantie_id" id="vakantie">
+                    <?php foreach ($vakanties as $id => $vakantie) { ?>
+                        <option value="<?php echo $id; ?>"><?php echo $vakantie; ?></option>
+                    <?php } ?>
+                </select>
+                <input type="submit" name="vakantie-bewerken" value="Bewerken">
+            </form>
+            
         </div>
 
 

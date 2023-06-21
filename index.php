@@ -32,8 +32,6 @@ try {
 </head>
 
 <body>
-
-
     <header class="header">
         <?php
 
@@ -116,7 +114,7 @@ try {
 
                 if (isset($_POST['destination'])) {
                     $zoekterm = '%' . $_POST['destination'] . '%';
-                    $stmt = $connectie->prepare("SELECT * FROM vakanties WHERE titel LIKE ? ");
+                    $stmt = $connectie->prepare("SELECT * FROM vakanties WHERE vakantie LIKE ? ");
                     $stmt->execute([$zoekterm]);
                     $resultSet = $stmt->fetchAll();
 
@@ -202,7 +200,7 @@ try {
         <div class="main-container">
             <section class="bestemmingen">
                 <div class="bestemmingen-container">
-                    <h2 class="section-title"><a href="" class="section-title">Populaire bestemmingen</a></h2>
+                    <h2 class="section-title"><a href="bestemming.php" class="section-title">Populaire bestemmingen</a></h2>
                 </div>
 
             </section>
@@ -213,7 +211,7 @@ try {
 
                 if (isset($_POST['destination'])) {
                     $zoekterm = '%' . $_POST['destination'] . '%';
-                    $stmt = $connectie->prepare("SELECT * FROM vakanties WHERE titel LIKE ? ");
+                    $stmt = $connectie->prepare("SELECT * FROM vakanties WHERE vakantie LIKE ? ");
                     $stmt->execute([$zoekterm]);
                     $resultSet = $stmt;
 
@@ -228,12 +226,12 @@ try {
 
                 while ($row = $resultSet->fetch(PDO::FETCH_ASSOC)) {
                     $id = $row['id'];
-                    $titel = $row['titel'];
+                    $titel = $row['vakantie'];
                     $img1 = $row['img1'];
 
                     echo '<div class="destination-card radio-btns__btn">';
                     echo '<img class="bestemmingen-imgs" src="img/' . $row['img1'] . '" alt="" width="200" height="181">';
-                    echo '<a href="bestemming.php?bestemming=' . $row['id'] . '">' . $row['titel'] . '</a>';
+                    echo '<a href="bestemming.php?bestemming=' . $row['id'] . '">' . $row['vakantie'] . '</a>';
                     echo '<a href="bestemming.php?bestemming=' . $row['id'] . ' ">';
                     echo '<h6>' . $row['kortetitel'] . '</h6>';
                     echo '</a>';

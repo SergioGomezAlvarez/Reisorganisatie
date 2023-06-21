@@ -84,10 +84,10 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
                         Jouw vakantie naar
                         <?php
                         if (isset($_GET['bestemming'])) {
-                            $query = "SELECT titel FROM `vakanties` WHERE id =" . $_GET['bestemming'];
+                            $query = "SELECT vakantie FROM `vakanties` WHERE id =" . $_GET['bestemming'];
                             $result = $conn->query($query);
                             $row = $result->fetch(PDO::FETCH_ASSOC);
-                            echo "<span class='bestemming-naam'>" . $row['titel'] . "</span>";
+                            echo "<span class='bestemming-naam'>" . $row['vakantie'] . "</span>";
                         }
                         ?>
 

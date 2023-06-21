@@ -43,16 +43,16 @@ try {
         if ($isLoggedIn) {
             $username = $_SESSION['username'];
         }
+
+        // Controleer of de gebruiker de SuperAdmin is
+        $isSuperAdmin = ($isLoggedIn && $username === "SuperAdmin");
         ?>
+
         <nav>
             <div class="navigatie-first">
-
                 <a href="bestemming.php">+31 6 234 567 89</a>
-
                 <span class="scheidingslijn"></span>
-
                 <a href="Contact.php">Contact Ons</a>
-
             </div>
             <div class="navigatie-second">
                 <?php include_once 'header.php'; ?>
@@ -61,18 +61,20 @@ try {
                     <span class="scheidingslijn"></span>
                     <a href="registration.php">Sign Up</a>
                 <?php } else { ?>
-                    <!-- Toon de gebruikersnaam of een welkomstbericht -->
                     <span>Welcome,
                         <?php echo $username; ?>
                     </span>
-                    <!-- Andere navigatie-items voor ingelogde gebruikers -->
                     <span class="scheidingslijn"></span>
                     <a href="#">NL</a>
                     <span class="scheidingslijn"></span>
                     <a href="mijnAccount.php">Mijn Account</a>
+                    <?php if ($isSuperAdmin) { ?>
+                        <button>Show Button</button>
+                    <?php } ?>
                 <?php } ?>
             </div>
         </nav>
+
         <div class="top-info">
             <div class="top-logo">
                 <img class="logo-img" src="img/Logo1.2.jpg" alt="">
@@ -200,7 +202,8 @@ try {
         <div class="main-container">
             <section class="bestemmingen">
                 <div class="bestemmingen-container">
-                    <h2 class="section-title"><a href="bestemming.php" class="section-title">Populaire bestemmingen</a></h2>
+                    <h2 class="section-title"><a href="bestemming.php" class="section-title">Populaire bestemmingen</a>
+                    </h2>
                 </div>
 
             </section>

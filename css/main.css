@@ -759,6 +759,7 @@ nav {
     height: 3.125rem;
     margin-left: 20px;
     border-radius: 10px;
+    text-decoration: none;
     background-color: #00328a;
 }
 
@@ -766,3 +767,5 @@ nav {
     background-color: #031637;
     cursor: pointer;
 }   
+
+

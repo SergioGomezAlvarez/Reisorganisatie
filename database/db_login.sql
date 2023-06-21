@@ -73,7 +73,7 @@ INSERT INTO `contactformulier` (`naam`, `email`, `onderwerp`, `bericht`) VALUES
 --
 
 CREATE TABLE `member` (
-  `mem_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
   `username` varchar(30) NOT NULL,
@@ -84,7 +84,7 @@ CREATE TABLE `member` (
 -- Dumping data for table `member`
 --
 
-INSERT INTO `member` (`mem_id`, `firstname`, `lastname`, `username`, `password`) VALUES
+INSERT INTO `member` (`id`, `firstname`, `lastname`, `username`, `password`) VALUES
 (14, 'O.', 'Almohamad khalil', 'SuperAdmin', 'SuperAdmin'),
 (15, 'melvin', 'Almohamad khalil', 'ff', 'ff');
 
@@ -168,7 +168,7 @@ ALTER TABLE `boekingen`
 -- Indexes for table `member`
 --
 ALTER TABLE `member`
-  ADD PRIMARY KEY (`mem_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `menu`
@@ -196,7 +196,7 @@ ALTER TABLE `boekingen`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `mem_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `menu`

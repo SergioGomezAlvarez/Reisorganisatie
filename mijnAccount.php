@@ -8,10 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bestemming.css">
     <link rel="stylesheet" media=" screen and (max-width:768px)" href="mobile.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/mijnAccount.css">
+    
 
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Roboto+Condensed&display=swap"
@@ -43,8 +45,15 @@
     $firstname = $result['firstname'];
     $password = $result['password'];
 
-
-
+    if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['name'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $name = $_POST['name'];
+        $sql = "UPDATE `member` SET `username`=:username, `password`=:password, `firstname`=:firstname WHERE `username`=:username";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute(['username' => $username, 'password' => $password, 'firstname' => $name]);
+        header("Location: mijnAccount.php");
+    }
     ?>
 
 <form method="post">

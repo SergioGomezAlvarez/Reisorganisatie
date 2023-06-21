@@ -47,7 +47,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
             <div class="navigatie-first">
                 <a href="test.html">+31 6 234 567 89</a>
                 <span class="scheidingslijn"></span>
-                <a href="bestemmijng.php">contact@domain.com</a>
+                <a href="Contact.php">mijn account</a>
             </div>
             <div class="navigatie-second">
                 <?php include_once 'header.php'; ?>

@@ -2,7 +2,7 @@
     .top-midden-info {
         width: 100%;
     }
-    
+
     .underline-button {
         margin-bottom: 10px;
     }
@@ -39,4 +39,57 @@
         height: 180px;
         margin-bottom: 40px;
     }
+
+    @media screen and (max-width: 768px) {
+        .horeca-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    
+        .hotel-cards {
+            width: 100%;
+        }
+    }
+    
+    @media screen and (min-width: 769px) {
+        .horeca-container {
+            display: block;
+        }
+    
+        .hotel-card {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .hotel-cards {
+            width: calc(50% - 10px);
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        .about-us-image {
+            display: flex;
+            width: 65%;
+            height: auto;
+            border: 0px;
+            border-radius: 20px;
+        }
+    }
+    
+    .about-us-image {
+        display: flex;
+        width: 60%;
+        height: auto;
+        border: 0px;
+        border-radius: 20px;
+    }
+      
+    .footer-info{
+        display: none;
+    }
+
+    .footer-container{
+        justify-content: space-around;
+    }
 }
+

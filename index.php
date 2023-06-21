@@ -35,21 +35,44 @@ try {
 
 
     <header class="header">
+        <?php
+
+        // Controleer of de gebruiker is ingelogd
+        $isLoggedIn = isset($_SESSION['username']);
+
+        // Als de gebruiker is ingelogd, sla de gebruikersnaam op in een variabele
+        $username = "";
+        if ($isLoggedIn) {
+            $username = $_SESSION['username'];
+        }
+        ?>
         <nav>
             <div class="navigatie-first">
+
                 <a href="bestemming.php">+31 6 234 567 89</a>
+
                 <span class="scheidingslijn"></span>
-                <a href="Contact.php">contact ons</a>
+
+                <a href="Contact.php">Contact Ons</a>
+
             </div>
             <div class="navigatie-second">
                 <?php include_once 'header.php'; ?>
-                <a href="login.php">Login</a>
-                <span class="scheidingslijn"></span>
-                <a href="#">Sign Up</a>
-                <span class="scheidingslijn"></span>
-                <a href="#">NL</a>
-                <span class="scheidingslijn"></span>
-                <a href="mijnAccount.php">mijn account</a>
+                <?php if (!$isLoggedIn) { ?>
+                    <a href="login.php">Login</a>
+                    <span class="scheidingslijn"></span>
+                    <a href="registration.php">Sign Up</a>
+                <?php } else { ?>
+                    <!-- Toon de gebruikersnaam of een welkomstbericht -->
+                    <span>Welcome,
+                        <?php echo $username; ?>
+                    </span>
+                    <!-- Andere navigatie-items voor ingelogde gebruikers -->
+                    <span class="scheidingslijn"></span>
+                    <a href="#">NL</a>
+                    <span class="scheidingslijn"></span>
+                    <a href="mijnAccount.php">Mijn Account</a>
+                <?php } ?>
             </div>
         </nav>
         <div class="top-info">
@@ -71,7 +94,7 @@ try {
                     </button>
 
                 </div>
-                <div class="mijn-reservring-box"><a class="mijn-reservering-text" href="">Mijn reservering</a></div>
+                <div class="mijn-reservring-box"><a class="mijn-reservering-text" href="">Mijn Account</a></div>
             </div>
         </div>
         <div class="top-text-bg">
@@ -197,7 +220,7 @@ try {
 
                 } else {
                     $resultSet = $connectie->query("SELECT * FROM vakanties");
-             
+
 
                 }
 
@@ -321,8 +344,9 @@ try {
                         <i class="fa-regular fa-envelope envelope" style="color: #ffc800;"></i>
                         <p>Uw Email</p>
                     </div>
-                    <a class="email-send-button" href="mailto:gebruikersnaam@emailadres.nl?subject=Tekst"><i class="fa-solid fa-arrow-right"></i></a>
-                        
+                    <a class="email-send-button" href="mailto:gebruikersnaam@emailadres.nl?subject=Tekst"><i
+                            class="fa-solid fa-arrow-right"></i></a>
+
                     </a>
                 </div>
 

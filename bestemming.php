@@ -30,7 +30,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/bestemming.css">
-    <link rel="stylesheet" media=" screen and (max-width:768px)" href="mobile.css" />
+    <link rel="stylesheet" media=" screen and (max-width:769px)" href="css/mobile.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -47,7 +47,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
             <div class="navigatie-first">
                 <a href="test.html">+31 6 234 567 89</a>
                 <span class="scheidingslijn"></span>
-                <a href="Contact.php">mijn account</a>
+                <a href="Contact.php">Mijn Account</a>
             </div>
             <div class="navigatie-second">
                 <?php include_once 'header.php'; ?>

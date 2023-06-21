@@ -20,7 +20,7 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" media=" screen and (max-width:768px)" href="mobile.css" />
+    <link rel="stylesheet" media=" screen and (max-width:769px)" href="css/mobile.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -319,13 +319,10 @@ try {
                 <div class="footer-email-bg">
                     <div class="footer-email-container">
                         <i class="fa-regular fa-envelope envelope" style="color: #ffc800;"></i>
-                        <p>Uw Email </p>
+                        <p>Uw Email</p>
                     </div>
-                    <a class="email-send-button">
-                        <i class="fa-solid fa-arrow-right" style="color: #ffffff;"><a
-                                href="mailto:gebruikersnaam@emailadres.nl?subject=Tekst">Stuur een e-mail</a></i>
-                        <i class="fa-solid fa-arrow-right" style="color: #ffffff;"><a
-                                href="mailto:gebruikersnaam@emailadres.nl?subject=Tekst">Stuur een e-mail</a></i>
+                    <a class="email-send-button" href="mailto:gebruikersnaam@emailadres.nl?subject=Tekst"><i class="fa-solid fa-arrow-right"></i></a>
+                        
                     </a>
                 </div>
 

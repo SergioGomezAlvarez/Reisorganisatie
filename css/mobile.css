@@ -1,0 +1,42 @@
+@media screen and (max-width: 769px) {
+    .top-midden-info {
+        width: 100%;
+    }
+    
+    .underline-button {
+        margin-bottom: 10px;
+    }
+
+    .mijn-reservering-text {
+        color: white;
+        font-size: 0.7rem;
+        font-weight: 60;
+        text-decoration: none;
+    }
+
+    .mijn-reservring-box {
+        width: 30%;
+        height: 20%;
+        background-color: rgba(70, 95, 100, 0.59);
+        border-radius: 3px;
+        padding: 2px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .locatie-container {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        height: 252px;
+        align-items: flex-start;
+        margin-bottom: 50px;
+    }
+
+    .bestemmingen {
+        width: 85%;
+        height: 180px;
+        margin-bottom: 40px;
+    }
+}

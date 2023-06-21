@@ -195,8 +195,9 @@
         <div class="box vakantie-box">
       
 
-            <h2>Vakantie toevoegen</h2>
+          
             <form method="POST" class="aanmaken" action="vakantietoevoegen.php  ">
+            <h2>Vakantie toevoegen</h2>
                 <div class="form-row">
                     <label for="vakantie">Vakantie:</label>
                     <input type="text" id="vakantie" name="vakantie" required><br>
@@ -299,8 +300,8 @@
                         $stmt->bindParam(':eind_datum', $eind_datum);
                         $stmt->execute();
 
-                        header("Location: AdminPanel.php");
-                        exit;
+                     
+                        
 
                     }
 
@@ -316,16 +317,76 @@
                     // Sluit de databaseverbinding
                     $dbh = null;
             ?>
-            <h2>Selecteer een vakantie om te bewerken</h2>
+          
 
-            <form method="POST">
+            <form method="POST" class="aanmaken">
+            <h2>Selecteer een vakantie om te bewerken</h2>
                 <label for="vakantie">Vakantie:</label>
                 <select name="vakantie_id" id="vakantie">
                     <?php foreach ($vakanties as $id => $vakantie) { ?>
                         <option value="<?php echo $id; ?>"><?php echo $vakantie; ?></option>
                     <?php } ?>
                 </select>
-                <input type="submit" name="vakantie-bewerken" value="Bewerken">
+                <div class="from-row" >
+                    <label for="vakanrie">Vakantie:</label>
+                    <input type="text" id="vakantie" name="vakantie" required><br>
+                </div>
+                <div class="from-row">
+                    <label for="korte_omschrijving">Korte omschrijving:</label>
+                    <input type="text" id="korte_omschrijving" name="korte_omschrijving" required><br>
+                </div>
+                <div class="from-row">
+                    <label for="algemene_beschrijving">Algemene beschrijving:</label>
+                    <input type="text" id="algemene_beschrijving" name="algemene_beschrijving" required><br>
+                </div>
+                <div class="from-row">
+                    <label for="ligging_omgeving">Ligging en omgeving:</label>
+                    <input type="text" id="ligging_omgeving" name="ligging_omgeving" required><br>
+                </div>
+                <div class="from-row">
+                    <label for="kamers">Kamers:</label>
+                    <input type="text" id="kamers" name="kamers" required><br>
+                </div>
+                <div class="from-row">
+                    <label for="faciliteiten">Faciliteiten:</label>
+                    <input type="text" id="faciliteiten" name="faciliteiten" required><br>
+                </div>
+                <div class="from-row">
+                    <label for="img1">Afbeelding 1:</label>
+                    <input type="text" id="img1" name="img1"><br>
+                </div>
+                <div class="from-row">
+                    <label for="img2">Afbeelding 2:</label>
+                    <input type="text" id="img2" name="img2"><br>
+                </div>
+                <div class="from-row">
+                    <label for="img3">Afbeelding 3:</label>
+                    <input type="text" id="img3" name="img3"><br>
+                </div>
+                <div class="from-row">
+                    <label for="img4">Afbeelding 4:</label>
+                    <input type="text" id="img4" name="img4"><br>
+                </div>
+                <div class="from-row">
+                    <label for="img5">Afbeelding 5:</label>
+                    <input type="text" id="img5" name="img5"><br>
+                </div>
+                <div class="from-row">
+                    <label for="kortetitel">Korte titel:</label>
+                    <input type="text" id="kortetitel" name="kortetitel" required><br>
+                </div>
+                <div class="from-row">
+                    <label for="begin_datum">Begin datum:</label>
+                    <input type="date" id="begin_datum" name="begin_datum" required><br>
+                </div>
+                <div class="from-row">
+                    <label for="eind_datum">Eind datum:</label>
+                    <input type="date" id="eind_datum" name="eind_datum" required><br>
+                </div>
+                <input type="submit" name="vakantie_verwerk" value="Vakantie bewerken">
+            </form>
+
+
             </form>
             
         </div>

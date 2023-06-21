@@ -62,7 +62,7 @@ try {
                     <a href="registration.php">Sign Up</a>
                 <?php } else { ?>
                     <span>Welcome,
-                        <?php echo $username; ?>
+                        <?php echo $username; ?>    
                     </span>
                     <span class="scheidingslijn"></span>
                     <a href="#">NL</a>

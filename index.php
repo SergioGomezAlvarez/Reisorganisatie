@@ -196,8 +196,8 @@ try {
 
 
                 } else {
-                    $resultSet = $connectie->query("SELECT * FROM vakanties")->fetchAll();
-
+                    $resultSet = $connectie->query("SELECT * FROM vakanties");
+             
 
                 }
 

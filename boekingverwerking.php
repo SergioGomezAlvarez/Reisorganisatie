@@ -2,28 +2,34 @@
 session_start();
 require_once './database/conn.php';
 
-
 // Controleer of de gebruiker is ingelogd
 if (!isset($_SESSION['login'])) {
     echo "Je moet ingelogd zijn om een boeking te maken.";
     exit();
 }
 
-// Controleer of de vereiste gegevens zijn ingevuld
+// Controleer of het vakantie-id is verzonden via het formulier
 if (isset($_POST['vakantie_id'])) {
     $vakantieId = $_POST['vakantie_id'];
-    $memberId = $_SESSION['memberid']; // Haal de member_id op uit de sessie
+    
+    // Haal de gebruikersnaam op uit de sessie
+    $username = $_SESSION['username'];
+    
+    // Voeg een nieuwe boeking toe aan de database
+    $insertSql = "INSERT INTO boekingen (naam, email, vakantie_id, boekingsdatum, memberid) VALUES (:naam, :email, :vakantie_id, :boekingsdatum, :memberid)";
+    $insertQuery = $conn->prepare($insertSql);
+    $insertQuery->execute([
+        'naam' => $username,
+        'email' => '', // Vul hier de e-mail van de gebruiker in
+        'vakantie_id' => $vakantieId,
+        'boekingsdatum' => date('Y-m-d'),
+        'memberid' => '' // Vul hier de ID van de gebruiker in
+    ]);
 
-    // Boeking in de database opslaan
-    $sql = "INSERT INTO boekingen (naam, email, vakantie_id, memberid) SELECT naam, email, ?, ? FROM member WHERE memberid = ?";
-    $query = $conn->prepare($sql);
-    $query->execute([$vakantieId, $memberId, $memberId]);
-
-    // Verdere verwerking of bevestigingsbericht tonen
-    echo "Boeking succesvol opgeslagen!";
-} else {
-    echo "Er zijn onvoldoende gegevens verstrekt om de boeking te voltooien.";
+    echo "Boeking succesvol!";
+    header('location:index.php');
 }
+
 ?>
 
 

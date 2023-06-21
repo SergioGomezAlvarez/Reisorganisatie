@@ -195,8 +195,9 @@
         <div class="box vakantie-box">
       
 
-            <h2>Vakantie toevoegen</h2>
+          
             <form method="POST" class="aanmaken" action="vakantietoevoegen.php  ">
+            <h2>Vakantie toevoegen</h2>
                 <div class="form-row">
                     <label for="vakantie">Vakantie:</label>
                     <input type="text" id="vakantie" name="vakantie" required><br>
@@ -299,8 +300,8 @@
                         $stmt->bindParam(':eind_datum', $eind_datum);
                         $stmt->execute();
 
-                        header("Location: AdminPanel.php");
-                        exit;
+                     
+                        
 
                     }
 
@@ -316,9 +317,10 @@
                     // Sluit de databaseverbinding
                     $dbh = null;
             ?>
-            <h2>Selecteer een vakantie om te bewerken</h2>
+          
 
-            <form method="POST">
+            <form method="POST" class="aanmaken">
+            <h2>Selecteer een vakantie om te bewerken</h2>
                 <label for="vakantie">Vakantie:</label>
                 <select name="vakantie_id" id="vakantie">
                     <?php foreach ($vakanties as $id => $vakantie) { ?>

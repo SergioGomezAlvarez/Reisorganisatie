@@ -24,128 +24,172 @@
     <h1>Admin Panel</h1>
 
     <div class="container">
-        <div class="box">
+    <div class="box">
+     
+        
+        <!-- Aanmaakformulier voor nieuwe gebruiker -->
+        <?php
+        // Verwerken van het formulier voor het aanmaken van een nieuwe gebruiker
+        if (isset($_POST['register'])) {
+            // Verwerk bijgewerkte gegevens
+            $firstname = $_POST['firstname'];
+            $lastname = $_POST['lastname'];
+            $username = $_POST['username'];
+            $password = $_POST['password'];
 
-            <!-- Aanmaakformulier voor nieuwe gebruiker -->
-            <form method="POST" class="aanmaken" action="register.php">
-                <h2>Gebruikersaccount aanmaken</h2>
+            // Verbind met de database en voeg de nieuwe gebruiker toe
+            require_once './database/conn.php';
+            $sql = "INSERT INTO `member` (`firstname`, `lastname`, `username`, `password`) VALUES (?, ?, ?, ?)";
+            $stmt = $conn->prepare($sql);
+            $stmt->execute([$firstname, $lastname, $username, $password]);
+
+            echo "Gebruiker succesvol aangemaakt.";
+        }
+        ?>
+        <form method="POST" class="aanmaken" action="register.php">
+            <!-- Voeg hier de invoervelden voor het aanmaken van een nieuwe gebruiker toe -->
+            <h2>Gebruiker aanmaken</h2>
+            <div class="form-row">
                 <label for="firstname">Voornaam:</label>
                 <input type="text" id="firstname" name="firstname" required><br>
-
+            </div>
+            <div class="form-row">
                 <label for="lastname">Achternaam:</label>
                 <input type="text" id="lastname" name="lastname" required><br>
-
+            </div>
+            <div class="form-row">
                 <label for="username">Gebruikersnaam:</label>
                 <input type="text" id="username" name="username" required><br>
-
+            </div>
+            <div class="form-row">
                 <label for="password">Wachtwoord:</label>
                 <input type="password" id="password" name="password" required><br>
+            </div>
+            <input type="submit" name="register" value="Gebruiker aanmaken"> OF
+            <a class="members" href="members.php">Bekijken bestaan gebruikers</a>
 
-                <input type="submit" name="register" value="Account aanmaken">
-            </form>
+        </form>
 
-            <?php
-            if (isset($_POST['update'])) {
-                // Verwerk bijgewerkte gegevens
-                $id = $_POST['id'];
-                $newUsername = $_POST['username'];
-                $newPassword = $_POST['password'];
-
-                // Verbind met de database en update de gebruikersgegevens
+        <!-- Tabel met gebruikersgegevens -->
+             
+            <!-- Tabel met gebruikersgegevens -->
+            <table class="gebruikerstabel">
+                <tr>
+                    <th>Voornaam</th>
+                    <th>Achternaam</th>
+                    <th>Gebruikersnaam</th>
+                    <th>Wachtwoord</th>
+                    <th>Bewerken</th>
+                    <th>Verwijderen</th>
+                </tr>
+                <?php
+                // Verbind met de database en haal alle gebruikers op
                 require_once './database/conn.php';
-                $sql = "UPDATE `member` SET `username` = ?, `password` = ? WHERE `id` = ?";
+                $sql = "SELECT * FROM `member`";
                 $stmt = $conn->prepare($sql);
-                $stmt->execute([$newUsername, $newPassword, $id]);
+                $stmt->execute();
+                $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                echo "Gebruikersgegevens succesvol bijgewerkt.";
-            }
-            ?>
+                if ($users) {
+                    foreach ($users as $user) {
+                        ?>
+                        <tr>
+                            <td>
+                                <?php echo $user['firstname']; ?>
+                            </td>
+                            <td>
+                                <?php echo $user['lastname']; ?>
+                            </td>
+                            <td>
+                                <?php echo $user['username']; ?>
+                            </td>
+                            <td>
+                                <?php echo $user['password']; ?>
+                            </td>
+                            <td>
+                                <!-- Bewerkingsknop -->
+                                <button type="button" onclick="openPopup('<?php echo $user['id']; ?>')">Bijwerken</button>
+                            </td>
+                            <td>
+                                <!-- Verwijderingsknop -->
+                                <form method="POST" class="verwijderen" action="">
+                                    <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
+                                    <button type="submit" name="verwijderen">Verwijderen</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <?php
+                    }
+                } else {
+                    echo "<tr><td colspan='6'>Geen gebruikers gevonden.</td></tr>";
+                }
+                ?>
+            </table>
 
-            <?php
-            // Verbind met de database en haal alle gebruikers op
-            require_once './database/conn.php';
-            $sql = "SELECT * FROM `member`";
-            $stmt = $conn->prepare($sql);
-            $stmt->execute();
-            $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-            if ($users) {
-                // Toon de lijst van gebruikers om uit te kiezen
-                foreach ($users as $user) {
-                    ?>
-                    <form method="POST" class="bewerken" action="">
-
-                        <h2>Gebruikersaccount bewerken</h2>
-                        <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
-
+            <!-- Pop-upvenster voor bewerken -->
+            <div id="popup">
+                <div id="popupContent" style="background-color: black;">
+                    <span id="popupClose" onclick="closePopup()">&times;</span>
+                    <h2>Gebruikersaccount bewerken</h2>
+                    <form method="POST" id="bewerkenForm" action="">
+                        <input type="hidden" name="id" id="userIdInput">
                         <label for="firstname">Voornaam:</label>
-                        <input type="text" id="firstname" name="firstname" value="<?php echo $user['firstname']; ?>"
-                            required><br>
-
+                        <input type="text" id="firstname" name="firstname" value="" required>
                         <label for="lastname">Achternaam:</label>
-                        <input type="text" id="lastname" name="lastname" value="<?php echo $user['lastname']; ?>" required><br>
-
+                        <input type="text" id="lastname" name="lastname" value="" required>
                         <label for="username">Gebruikersnaam:</label>
-                        <input type="text" id="username" name="username" value="<?php echo $user['username']; ?>" required><br>
-
+                        <input type="text" id="username" name="username" value="" required>
                         <label for="password">Wachtwoord:</label>
-                        <input type="password" id="password" name="password" value="<?php echo $user['password']; ?>"
-                            required><br>
-
+                        <input type="password" id="password" name="password" value="" required>
                         <input type="submit" name="update" value="Bijwerken">
                     </form>
-                    <?php
+                </div>
+            </div>
+
+            <!-- JavaScript-functies om pop-upvenster te openen/sluiten -->
+            <script>
+                function openPopup(userId) {
+                    var popup = document.getElementById("popup");
+                    var form = document.getElementById("bewerkenForm");
+                    var userIdInput = document.getElementById("userIdInput");
+
+                    // Vul het gebruikers-ID in het verborgen invoerveld
+                    userIdInput.value = userId;
+
+                    // Pas de stijl van het pop-upvenster aan om het weer te geven
+                    popup.style.display = "block";
                 }
-            } else {
-                echo "Geen gebruikers gevonden.";
+
+                function closePopup() {
+                    var popup = document.getElementById("popup");
+
+                    // Verberg het pop-upvenster
+                    popup.style.display = "none";
+                }
+            </script>
+
+            <?php
+            // Verwijderen van een lid met de verwijderingsknop
+            if (isset($_POST['verwijderen'])) {
+                // Verwerk bijgewerkte gegevens
+                $id = $_POST['id'];
+
+                // Verbind met de database en verwijder het lid
+                require_once './database/conn.php';
+                $sql = "DELETE FROM `member` WHERE `id` = ?";
+                $stmt = $conn->prepare($sql);
+                $stmt->execute([$id]);
             }
             ?>
+
+
+
+
         </div>
 
 
 
     </div>
-    <div class="box">
-        <?php
-        // Verwijderen van een lid
-        if (isset($_POST['delete'])) {
-            // Verwerk bijgewerkte gegevens
-            $id = $_POST['id'];
-
-            // Verbind met de database en verwijder het lid
-            require_once './database/conn.php';
-            $sql = "DELETE FROM `member` WHERE `id` = ?";
-            $stmt = $conn->prepare($sql);
-            $stmt->execute([$id]);
-
-            echo "Gebruiker succesvol verwijderd.";
-        }
-
-        // Toon de lijst van gebruikers om uit te kiezen
-        require_once './database/conn.php';
-        $stmt = $conn->prepare("SELECT * FROM `member`");
-        $stmt->execute();
-
-        // Maak een array van alle gebruikers voor gebruik in keuzelijst
-        $users = array();
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $users[$row['id']] = $row['username'];
-        }
-        // Sluit de databaseverbinding
-        $conn = null;
-        ?>
-
-        <h2>Gebruikersaccount verwijderen</h2>
-        <form method="POST">
-            <label for="user">Gebruiker:</label>
-            <select name="id" id="user">
-                <?php foreach ($users as $id => $username) { ?>
-                    <option value="<?php echo $id; ?>"><?php echo $username; ?></option>
-                <?php } ?>
-            </select>
-            <input type="submit" name="delete" value="Verwijderen">
-        </form>
-
         <div class="box">
             <?php
             //connectie met database
@@ -200,27 +244,27 @@
             <h2>Vakantie toevoegen</h2>
                 <div class="form-row">
                     <label for="vakantie">Vakantie:</label>
-                    <input type="text" id="vakantie" name="vakantie" required><br>
+                    <input type="text" id="vakantie" name="vakantie" ><br>
                 </div>
                 <div class="form-row">
                     <label for="korte_omschrijving">Korte omschrijving:</label>
-                    <input type="text" id="korte_omschrijving" name="korte_omschrijving" required><br>
+                    <input type="text" id="korte_omschrijving" name="korte_omschrijving" ><br>
                 </div>
                 <div class="form-row">
                     <label for="algemene_beschrijving">Algemene beschrijving:</label>
-                    <input type="text" id="algemene_beschrijving" name="algemene_beschrijving" required><br>
+                    <input type="text" id="algemene_beschrijving" name="algemene_beschrijving" ><br>
                 </div>
                 <div class="form-row">
                     <label for="ligging_omgeving">Ligging en omgeving:</label>
-                    <input type="text" id="ligging_omgeving" name="ligging_omgeving" required><br>
+                    <input type="text" id="ligging_omgeving" name="ligging_omgeving" ><br>
                 </div>
                 <div class="form-row">
                     <label for="kamers">Kamers:</label>
-                    <input type="text" id="kamers" name="kamers" required><br>
+                    <input type="text" id="kamers" name="kamers" ><br>
                 </div>
                 <div class="form-row">
                     <label for="faciliteiten">Faciliteiten:</label>
-                    <input type="text" id="faciliteiten" name="faciliteiten" required><br>
+                    <input type="text" id="faciliteiten" name="faciliteiten" ><br>
                 </div>
                 <div class="form-row">
                     <label for="img1">Afbeelding 1:</label>
@@ -244,15 +288,15 @@
                 </div>
                 <div class="form-row">
                     <label for="kortetitel">Korte titel:</label>
-                    <input type="text" id="kortetitel" name="kortetitel" required><br>
+                    <input type="text" id="kortetitel" name="kortetitel" ><br>
                 </div>
                 <div class="form-row">
                     <label for="begin_datum">Begin datum:</label>
-                    <input type="date" id="begin_datum" name="begin_datum" required><br>
+                    <input type="date" id="begin_datum" name="begin_datum" ><br>
                 </div>
                 <div class="form-row">
                     <label for="eind_datum">Eind datum:</label>
-                    <input type="date" id="eind_datum" name="eind_datum" required><br>
+                    <input type="date" id="eind_datum" name="eind_datum" ><br>
                 </div>
                 <input type="submit" name="vakantie-toevoegen" value="Vakantie toevoegen">
             </form>
@@ -329,27 +373,27 @@
                 </select>
                 <div class="from-row" >
                     <label for="vakanrie">Vakantie:</label>
-                    <input type="text" id="vakantie" name="vakantie" required><br>
+                    <input type="text" id="vakantie" name="vakantie" ><br>
                 </div>
                 <div class="from-row">
                     <label for="korte_omschrijving">Korte omschrijving:</label>
-                    <input type="text" id="korte_omschrijving" name="korte_omschrijving" required><br>
+                    <input type="text" id="korte_omschrijving" name="korte_omschrijving" ><br>
                 </div>
                 <div class="from-row">
                     <label for="algemene_beschrijving">Algemene beschrijving:</label>
-                    <input type="text" id="algemene_beschrijving" name="algemene_beschrijving" required><br>
+                    <input type="text" id="algemene_beschrijving" name="algemene_beschrijving" ><br>
                 </div>
                 <div class="from-row">
                     <label for="ligging_omgeving">Ligging en omgeving:</label>
-                    <input type="text" id="ligging_omgeving" name="ligging_omgeving" required><br>
+                    <input type="text" id="ligging_omgeving" name="ligging_omgeving" ><br>
                 </div>
                 <div class="from-row">
                     <label for="kamers">Kamers:</label>
-                    <input type="text" id="kamers" name="kamers" required><br>
+                    <input type="text" id="kamers" name="kamers" ><br>
                 </div>
                 <div class="from-row">
                     <label for="faciliteiten">Faciliteiten:</label>
-                    <input type="text" id="faciliteiten" name="faciliteiten" required><br>
+                    <input type="text" id="faciliteiten" name="faciliteiten" ><br>
                 </div>
                 <div class="from-row">
                     <label for="img1">Afbeelding 1:</label>
@@ -373,15 +417,15 @@
                 </div>
                 <div class="from-row">
                     <label for="kortetitel">Korte titel:</label>
-                    <input type="text" id="kortetitel" name="kortetitel" required><br>
+                    <input type="text" id="kortetitel" name="kortetitel" ><br>
                 </div>
                 <div class="from-row">
                     <label for="begin_datum">Begin datum:</label>
-                    <input type="date" id="begin_datum" name="begin_datum" required><br>
+                    <input type="date" id="begin_datum" name="begin_datum" ><br>
                 </div>
                 <div class="from-row">
                     <label for="eind_datum">Eind datum:</label>
-                    <input type="date" id="eind_datum" name="eind_datum" required><br>
+                    <input type="date" id="eind_datum" name="eind_datum" ><br>
                 </div>
                 <input type="submit" name="vakantie_verwerk" value="Vakantie bewerken">
             </form>

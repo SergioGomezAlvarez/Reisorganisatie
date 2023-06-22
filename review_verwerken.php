@@ -10,7 +10,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $opmerking = $_POST['opmerking'];
 
         // Voer de nodige validatie uit op de ingediende gegevens
-        
+        // Controleer of de gebruiker is ingelogd
+if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
+    header("Location: login.php"); // Stuur de gebruiker naar de inlogpagina als deze niet is ingelogd
+    exit();
+}
 
         // Voeg de review toe aan de database
         $dsn = 'mysql:dbname=db_login;host=127.0.0.1';

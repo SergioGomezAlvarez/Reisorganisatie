@@ -13,10 +13,6 @@ try {
 session_start();
 
 // Controleer of de gebruiker is ingelogd
-if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
-    header("Location: login.php"); // Stuur de gebruiker naar de inlogpagina als deze niet is ingelogd
-    exit();
-}
 
 ?>
 
@@ -134,15 +130,15 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
                             </div>
 
                             <div class="rechts-img-onder">
-
+                             
                                 <div class="rechts-img">
-                                    <?php if (isset($_GET['bestemming'])) {
-                                        $query = "SELECT img5 FROM `vakanties` WHERE id =" . $_GET['bestemming'];
-                                        $result = $conn->query($query);
-                                        $row = $result->fetch(PDO::FETCH_ASSOC);
-                                        echo "<img class='onderste-img2'  src='" . $row['img5'] . "'>";
-                                    }
-                                    ?>
+                                <?php if (isset($_GET['bestemming'])) {
+                                    $query = "SELECT img5 FROM `vakanties` WHERE id =" . $_GET['bestemming'];
+                                    $result = $conn->query($query);
+                                    $row = $result->fetch(PDO::FETCH_ASSOC);
+                                    echo "<img class='onderste-img2'  src='" . $row['img5'] . "'>";
+                                }
+                                ?>
                                 </div>
                             </div>
                         </div>
@@ -212,54 +208,54 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
             </form>
 
             <div class="review-lijst">
-                <h3>Reviews:</h3>
-                <?php
-                // Controleer of het formulier een veld heeft met de naam "vakantie_id" en of het correct is ingevuld
-                if (isset($_POST['vakantie_id'])) {
-                    $vakantie_id = $_POST['vakantie_id'];
+    <h3>Reviews:</h3>
+    <?php
+    // Controleer of het formulier een veld heeft met de naam "vakantie_id" en of het correct is ingevuld
+    if (isset($_POST['vakantie_id'])) {
+        $vakantie_id = $_POST['vakantie_id'];
 
-                    // Voer eventuele extra validatie uit op het vakantie-ID, indien nodig
-                    // ...
-                
-                    // Query om reviews met bijbehorende vakanties op te halen
-                    $sql = "SELECT reviews.gebruikersnaam, reviews.beoordeling, reviews.opmerking, vakanties.vakantie FROM reviews INNER JOIN vakanties ON reviews.vakantie_id = vakanties.id";
+        // Voer eventuele extra validatie uit op het vakantie-ID, indien nodig
+        // ...
 
-                    // Voeg de vakantie_id-voorwaarde toe aan de SQL-query om alleen reviews voor die vakantie op te halen
-                    $sql .= " WHERE reviews.vakantie_id = :vakantie_id";
-                    $stmt = $conn->prepare($sql);
-                    $stmt->bindValue(':vakantie_id', $vakantie_id);
-                } else {
-                    // Als het vakantie-ID niet is ingevuld, haal alle reviews op zonder filter
-                    $sql = "SELECT reviews.gebruikersnaam, reviews.beoordeling, reviews.opmerking, vakanties.vakantie FROM reviews INNER JOIN vakanties ON reviews.vakantie_id = vakanties.id";
-                    $stmt = $conn->prepare($sql);
-                }
+        // Query om reviews met bijbehorende vakanties op te halen
+        $sql = "SELECT reviews.gebruikersnaam, reviews.beoordeling, reviews.opmerking, vakanties.vakantie FROM reviews INNER JOIN vakanties ON reviews.vakantie_id = vakanties.id";
 
-                $stmt->execute();
+        // Voeg de vakantie_id-voorwaarde toe aan de SQL-query om alleen reviews voor die vakantie op te halen
+        $sql .= " WHERE reviews.vakantie_id = :vakantie_id";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindValue(':vakantie_id', $vakantie_id);
+    } else {
+        // Als het vakantie-ID niet is ingevuld, haal alle reviews op zonder filter
+        $sql = "SELECT reviews.gebruikersnaam, reviews.beoordeling, reviews.opmerking, vakanties.vakantie FROM reviews INNER JOIN vakanties ON reviews.vakantie_id = vakanties.id";
+        $stmt = $conn->prepare($sql);
+    }
 
-                // Loop door de resultaten en toon elke review met bijbehorende vakantie
-                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $gebruikersnaam = $row['gebruikersnaam'];
-                    $beoordeling = $row['beoordeling'];
-                    $opmerking = $row['opmerking'];
-                    $vakantie = $row['vakantie'];
+    $stmt->execute();
 
-                    // Toon de review met bijbehorende vakantie
-                    echo "<div class='review'>";
-                    echo "<h3>$gebruikersnaam</h3>";
+    // Loop door de resultaten en toon elke review met bijbehorende vakantie
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $gebruikersnaam = $row['gebruikersnaam'];
+        $beoordeling = $row['beoordeling'];
+        $opmerking = $row['opmerking'];
+        $vakantie = $row['vakantie'];
 
-                    // Bereken het aantal sterren op basis van de beoordeling
-                    $sterren = "";
-                    for ($i = 1; $i <= $beoordeling; $i++) {
-                        $sterren .= "&#9733;"; // Voeg een sterrensymbool toe
-                    }
+        // Toon de review met bijbehorende vakantie
+        echo "<div class='review'>";
+        echo "<h3>$gebruikersnaam</h3>";
 
-                    echo "<p class='beoordeling'>Beoordeling: <span class='sterren'>$sterren</span></p>";
-                    echo "<p>$opmerking</p>";
-                    echo "<h3>Vakantie naar: $vakantie</h3>";
-                    echo "</div>";
-                }
-                ?>
-            </div>
+        // Bereken het aantal sterren op basis van de beoordeling
+        $sterren = "";
+        for ($i = 1; $i <= $beoordeling; $i++) {
+            $sterren .= "&#9733;"; // Voeg een sterrensymbool toe
+        }
+
+        echo "<p class='beoordeling'>Beoordeling: <span class='sterren'>$sterren</span></p>";
+        echo "<p>$opmerking</p>";
+        echo "<h3>Vakantie naar: $vakantie</h3>";
+        echo "</div>";
+    }
+    ?>
+</div>
 
 
         </div>

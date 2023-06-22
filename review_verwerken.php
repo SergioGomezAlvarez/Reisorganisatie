@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $opmerking = $_POST['opmerking'];
 
         // Voer de nodige validatie uit op de ingediende gegevens
+        
 
         // Voeg de review toe aan de database
         $dsn = 'mysql:dbname=db_login;host=127.0.0.1';
@@ -25,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Geef een succesbericht weer
             echo "Review succesvol toegevoegd!";
+            header("Location: index.php");
         } catch (PDOException $e) {
             // Toon een foutbericht als er een fout optreedt
             echo "Fout bij het toevoegen van de review: " . $e->getMessage();

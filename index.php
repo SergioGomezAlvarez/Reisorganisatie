@@ -69,7 +69,10 @@ try {
                     <span class="scheidingslijn"></span>
                     <a href="mijnAccount.php">Mijn Account</a>
                     <?php if ($isSuperAdmin) { ?>
-                        <button>Show Button</button>
+
+                        <span class="scheidingslijn"></span>
+                        <a href="AdminPanel.php">AdminPanel </a>
+                     
                     <?php } ?>
                 <?php } ?>
             </div>
@@ -94,7 +97,7 @@ try {
                     </button>
 
                 </div>
-                <div class="mijn-reservring-box"><a class="mijn-reservering-text" href="">Mijn Account</a></div>
+                <div class="mijn-reservring-box"><a class="mijn-reservering-text" href="mijnAccount.php">Mijn Account</a></div>
             </div>
         </div>
         <div class="top-text-bg">

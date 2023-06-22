@@ -134,8 +134,16 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
                             </div>
 
                             <div class="rechts-img-onder">
-                                <div class="links-img"></div>
-                                <div class="rechts-img"></div>
+
+                                <div class="rechts-img">
+                                    <?php if (isset($_GET['bestemming'])) {
+                                        $query = "SELECT img5 FROM `vakanties` WHERE id =" . $_GET['bestemming'];
+                                        $result = $conn->query($query);
+                                        $row = $result->fetch(PDO::FETCH_ASSOC);
+                                        echo "<img class='onderste-img2'  src='" . $row['img5'] . "'>";
+                                    }
+                                    ?>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -171,7 +179,9 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
                     echo "<p>Beschikbaarheid: $beginDatum - $eindDatum ($beschikbaarheid)</p>";
                     echo "<form action='boekingverwerking.php' method='POST'>";
                     echo "<input type='hidden' name='vakantie_id' value='$vakantieId'>";
-                    echo "<button type='submit'action='boekingverwerking.php' class='boek-btn'>Boek nu</button>";
+                    echo "<button type='submit'action='boekingverwerking.php' class='boek-btn'>Boek nu </button>";
+                    //prijs weergeven
+                    echo "<p class='prijs'>Prijs: € 500 per person</p>";
                     echo "</form>";
                     echo "</div>";
                 }
@@ -204,9 +214,26 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
             <div class="review-lijst">
                 <h3>Reviews:</h3>
                 <?php
-                // Query om reviews met bijbehorende vakanties op te halen
-                $sql = "SELECT reviews.gebruikersnaam, reviews.beoordeling, reviews.opmerking, vakanties.vakantie FROM reviews INNER JOIN vakanties ON reviews.vakantie_id = vakanties.id ORDER BY reviews.id DESC";
-                $stmt = $conn->prepare($sql);
+                // Controleer of het formulier een veld heeft met de naam "vakantie_id" en of het correct is ingevuld
+                if (isset($_POST['vakantie_id'])) {
+                    $vakantie_id = $_POST['vakantie_id'];
+
+                    // Voer eventuele extra validatie uit op het vakantie-ID, indien nodig
+                    // ...
+                
+                    // Query om reviews met bijbehorende vakanties op te halen
+                    $sql = "SELECT reviews.gebruikersnaam, reviews.beoordeling, reviews.opmerking, vakanties.vakantie FROM reviews INNER JOIN vakanties ON reviews.vakantie_id = vakanties.id";
+
+                    // Voeg de vakantie_id-voorwaarde toe aan de SQL-query om alleen reviews voor die vakantie op te halen
+                    $sql .= " WHERE reviews.vakantie_id = :vakantie_id";
+                    $stmt = $conn->prepare($sql);
+                    $stmt->bindValue(':vakantie_id', $vakantie_id);
+                } else {
+                    // Als het vakantie-ID niet is ingevuld, haal alle reviews op zonder filter
+                    $sql = "SELECT reviews.gebruikersnaam, reviews.beoordeling, reviews.opmerking, vakanties.vakantie FROM reviews INNER JOIN vakanties ON reviews.vakantie_id = vakanties.id";
+                    $stmt = $conn->prepare($sql);
+                }
+
                 $stmt->execute();
 
                 // Loop door de resultaten en toon elke review met bijbehorende vakantie
@@ -231,9 +258,9 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
                     echo "<h3>Vakantie naar: $vakantie</h3>";
                     echo "</div>";
                 }
-
                 ?>
             </div>
+
 
         </div>
 

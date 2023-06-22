@@ -85,3 +85,21 @@ li {
     box-sizing: border-box;
     flex-wrap: wrap;
   }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #16171b;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #212d62;
+}
+
+tr:nth-child(even) {
+    background-color: #264069;
+}

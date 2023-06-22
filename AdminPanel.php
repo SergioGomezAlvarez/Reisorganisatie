@@ -388,6 +388,37 @@
 
 
             </form>
+                        
+            <?php
+              //connectie met database
+              $dsn = 'mysql:dbname=db_login;host=127.0.0.1';
+              $user = 'root';
+              $password = '';
+              $dbh = new PDO($dsn, $user, $password);
+
+              // contactformulier toenen
+                $stmt = $dbh->query("SELECT * FROM contactformulier");
+
+                // Maak een array van alle contactformulieren voor gebruik in keuzelijst
+              
+            
+            ?>
+            <h2>Contactformulier</h2>
+            <table>
+                <tr>
+                    <th>Naam</th>
+                    <th>Email</th>
+                    <th>Onderwerp</th>
+                    <th>Bericht</th>
+                </tr>
+                <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
+                    <tr>
+                        <td><?php echo $row['naam']; ?></td>
+                        <td><?php echo $row['email']; ?></td>
+                        <td><?php echo $row['onderwerp']; ?></td>
+                        <td><?php echo $row['bericht']; ?></td>
+                    </tr>
+                <?php } ?>
             
         </div>
 

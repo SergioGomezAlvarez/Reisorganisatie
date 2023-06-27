@@ -35,16 +35,13 @@ try {
     <header class="header">
         <?php
 
-        // Controleer of de gebruiker is ingelogd
         $isLoggedIn = isset($_SESSION['username']);
 
-        // Als de gebruiker is ingelogd, sla de gebruikersnaam op in een variabele
         $username = "";
         if ($isLoggedIn) {
             $username = $_SESSION['username'];
         }
 
-        // Controleer of de gebruiker de SuperAdmin is
         $isSuperAdmin = ($isLoggedIn && $username === "SuperAdmin");
         ?>
 
@@ -234,15 +231,16 @@ try {
                     $id = $row['id'];
                     $titel = $row['vakantie'];
                     $img1 = $row['img1'];
-
+                
+                    echo '<a href="bestemming.php?bestemming=' . $row['id'] . '">';
                     echo '<div class="destination-card radio-btns__btn">';
                     echo '<img class="bestemmingen-imgs" src="img/' . $row['img1'] . '" alt="" width="200" height="181">';
-                    echo '<a href="bestemming.php?bestemming=' . $row['id'] . '">' . $row['vakantie'] . '</a>';
-                    echo '<a href="bestemming.php?bestemming=' . $row['id'] . ' ">';
+                    echo $row['vakantie'];
                     echo '<h6>' . $row['kortetitel'] . '</h6>';
-                    echo '</a>';
                     echo '</div>';
+                    echo '</a>';
                 }
+                
 
                 ?>
 

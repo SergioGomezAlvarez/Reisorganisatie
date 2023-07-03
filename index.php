@@ -200,6 +200,7 @@ try {
     </header>
     <main>
         <div class="main-container">
+            <a class="geboekte-reizen-button" href="mijn_geboekte_reizen.php">Geboekte Reizen</a>
             <section class="bestemmingen">
                 <div class="bestemmingen-container">
                     <h2 class="section-title"><a href="bestemming.php" class="section-title">Populaire bestemmingen</a>
